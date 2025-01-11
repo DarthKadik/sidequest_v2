@@ -1,13 +1,7 @@
-import adapter from '@sveltejs/adapter-node';
+import vercel from '@sveltejs/adapter-vercel';
 
 export default {
   kit: {
-    adapter: adapter(),
-  },
-  vite: {
-    server: {
-      host: 'localhost',
-      port: 3000,
-    },
+    adapter: vercel(),
   },
 };
