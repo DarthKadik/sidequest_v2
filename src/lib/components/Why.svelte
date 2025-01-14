@@ -1,66 +1,26 @@
 <script>
-  export let cardsData;
-  export let id;
-
-  // @ts-ignore
-  function renderNodes(blocks = []) {
-    return blocks
-      .map((block) => {
-        if (block.type === "paragraph") {
-          return `<p>${renderChildren(block.children)}</p>`;
-        }
-        if (block.type === "heading") {
-          return `<h${block.level}>${renderChildren(block.children)}</h${block.level}>`;
-        }
-        if (block.type === "list") {
-          const listTag = block.format === "ordered" ? "ol" : "ul";
-          const items = block.children
-            // @ts-ignore
-            .map((item) => `<li>${renderChildren(item.children)}</li>`)
-            .join("");
-          return `<${listTag}>${items}</${listTag}>`;
-        }
-        return `<div>${renderChildren(block.children)}</div>`;
-      })
-      .join("");
-  }
-
-  // @ts-ignore
-  function renderChildren(children = []) {
-    // @ts-ignore
-    return children
-      // @ts-ignore
-      .map((node) => {
-        // link node
-        if (node.type === "link") {
-          return `<a href="${node.url}">${renderChildren(node.children)}</a>`;
-        }
-        // text node with marks
-        let text = node.text || "";
-        if (node.bold) text = `<strong>${text}</strong>`;
-        if (node.italic) text = `<em>${text}</em>`;
-        if (node.underline) text = `<u>${text}</u>`;
-        if (node.strikethrough) text = `<s>${text}</s>`;
-        if (node.code) text = `<code>${text}</code>`;
-        return text;
-      })
-      .join("");
-  }
+  export let title = 'We are not a school, but you will learn a lot';
+  export let text = 'PS: if you don’t have an idea in mind, we can help!';
+  export let cards = [
+    {
+      title: 'Card Title',
+      description: '<p>test</p>',
+    },
+  ];
 </script>
 
-<section class="why" {id}>
-  <h2>{cardsData?.data?.title}</h2>
+<section class="why">
+  <!-- Title -->
+  <h2>{title}</h2>
   <div class="grid">
-    {#each cardsData?.data?.cards as card}
+    {#each cards as card}
       <div class="card">
         <h4>{card.title}</h4>
-        {@html renderNodes(card.description)}
+        <div>{@html card.description}</div>
       </div>
     {/each}
   </div>
-  <div class="description">
-    {cardsData?.data?.description}
-  </div>
+  <p class="description">{text}</p>
 </section>
 
 <style>
@@ -93,9 +53,11 @@
     border-top: 3px solid var(--red);
     padding: 40px;
     border-radius: 8px;
+    text-align: justify;
   }
 
   .card h4 {
+    text-align: center;
     font-size: 1.2rem;
     color: var(--red);
     margin-bottom: 15px;
@@ -104,6 +66,7 @@
   .card p {
     font-size: 0.95rem;
     color: var(--yellow);
+    text-align: justify;
   }
 
   .why .description {

@@ -1,5 +1,11 @@
 <script>
-    export let roadmapData;
+  export let title = 'roadmap';
+  export let steps = [
+    {
+      title: 'week x',
+      description: '<p>test</p>',
+    },
+  ];
   </script>
   
 <style>
@@ -96,13 +102,13 @@
 </style>
   
   <section class="roadmap">
-    <h2>{roadmapData?.data?.title}</h2>
+    <h2>{title}</h2>
     <div class="timeline">
       <div class="timeline-content">
-        {#each roadmapData?.data?.roadmap_steps as step}
+        {#each steps as step}
           <div class="timeline-step">
             <h3>{step.title}</h3>
-            <p>{step.description}</p>
+            <p>{@html step.description}</p>
           </div>
         {/each}
       </div>

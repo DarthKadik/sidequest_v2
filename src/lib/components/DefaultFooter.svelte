@@ -1,18 +1,11 @@
 <script>
-  export let links = [
-    {
-      label: '',
-      address: '',
-    },
-  ]; 
-
 </script>
 
 <footer>
   <div class="nav-links">
-    {#each links as link}
-      <a href={link.address}>{link.label}</a>
-    {/each}
+      <a href="/">Home</a>
+      <a href="/faq">FAQ</a>
+      <a href="/apply">Application</a>
   </div>
   <div class="social-links">
     <a

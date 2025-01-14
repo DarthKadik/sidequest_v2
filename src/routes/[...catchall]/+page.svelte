@@ -9,7 +9,7 @@
     import BottomCTA from "$lib/components/BottomCTA.svelte";
   
     const apiKey = "7bff0c6c736b40dbaef3300a46e5008d";
-    const model = 'page';
+    const model = 'custome-page';
 
     const CUSTOM_COMPONENTS = [
     {

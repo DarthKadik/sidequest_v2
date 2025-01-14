@@ -1,6 +1,6 @@
 <script>
     import Ideas from '$lib/components/100ideas.svelte';
-    import Footer from '$lib/components/Footer.svelte';
+    import DefaultFooter from '$lib/components/DefaultFooter.svelte';
 
     export let data;
     const { ideaData } = data;
@@ -12,5 +12,5 @@
 
 <div class="global-container">
   <Ideas id="ideas-section" {ideaData} />
-  <Footer />
+  <DefaultFooter />
 </div>

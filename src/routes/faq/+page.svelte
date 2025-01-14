@@ -1,6 +1,6 @@
 <script>
     import Faq from '$lib/components/Faq.svelte';
-    import Footer from '$lib/components/Footer.svelte';
+    import DefaultFooter from '$lib/components/DefaultFooter.svelte';
 
     export let data;
     const { faqData } = data;
@@ -12,5 +12,5 @@
 
 <div class="global-container">
   <Faq id="faq-section" {faqData} />
-  <Footer />
+  <DefaultFooter />
 </div>

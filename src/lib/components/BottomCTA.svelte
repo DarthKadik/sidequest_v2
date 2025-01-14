@@ -1,16 +1,21 @@
 <script>
-  export let ctaData;
+  export let title;
+  export let description;
+  export let fullBtnLink;
+  export let outlineBtnLink;
+  export let fullBtn;
+  export let outlineBtn;
 </script>
 
 <section class="cta">
   <div class="middle-flex">
-    <p>{ctaData?.data?.description}</p>
+    <p>{description}</p>
     <div class="title-container">
-      <h1>{ctaData?.data?.title}</h1>
+      <h1>{title}</h1>
     </div>
     <div class="button-container">
-      <a class="full-btn" href={"/apply"}>Apply (4mins)</a>
-      <a class="outline-btn" href={"/faq"}>FAQ</a>
+      <a class="full-btn" href={fullBtnLink}>{fullBtn}</a>
+      <a class="outline-btn" href={outlineBtnLink}>{outlineBtn}</a>
     </div>
   </div>
 </section>
