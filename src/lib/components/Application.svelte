@@ -78,7 +78,7 @@
       const baseURL = "";
 
 
-      const res = await fetch(`/api/form-responses`, {
+      const res = await fetch(`https://mysidequest.xyz/api/form-responses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
