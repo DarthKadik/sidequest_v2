@@ -122,6 +122,7 @@
         <!-- Its be there or be square :) -->
         <h3>{formData.description}</h3>
       {/if}
+      <h2 style="color: red;">We are currently having issues with the form submission. Look back in 15mins. Sry</h2>
     </div>
     {#if !isSubmitted}
       <form on:submit={handleSubmit}>
