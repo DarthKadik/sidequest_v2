@@ -78,7 +78,7 @@
       const baseURL = "";
 
 
-      const res = await fetch(`http://34.136.198.157:1337/api/form-responses`, {
+      const res = await fetch(`https://34.136.198.157/api/form-responses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
