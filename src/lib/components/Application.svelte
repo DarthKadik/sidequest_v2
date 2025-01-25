@@ -118,10 +118,8 @@
   {#if formData && fields}
     <div class="text-content">
       <h2>{formData.name}</h2>
-      {#if formData.description}
         <!-- Its be there or be square :) -->
-        <h3>{formData.description}</h3>
-      {/if}
+        <h3>Our current batch has already started, but you can still join during the first week by Friday, January 31st, at 23:59. Just fill out this short application !</h3>
     </div>
     {#if !isSubmitted}
       <form on:submit={handleSubmit}>
