@@ -68,3 +68,45 @@ h1, h2 {
 a {
     color: #ffffff;
 }
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 2px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(243, 167, 18, 0.4);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255 , 0.7);
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 7rem;
+}
