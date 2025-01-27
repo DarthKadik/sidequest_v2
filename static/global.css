@@ -146,3 +146,69 @@ input[type="file"]::file-selector-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(243, 167, 18, 0.4);
 }
+
+form button:disabled {
+  background-color: #d98c00;
+  cursor: not-allowed;
+}
+
+input[type="file"]::file-selector-button:disabled {
+  background-color: #d98c00;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid var(--yellow);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 16px;
+  color: var(--yellow);
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid var(--yellow);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+}
+
+select {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid var(--yellow);
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #d98c00;
+}
