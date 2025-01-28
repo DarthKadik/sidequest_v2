@@ -35,10 +35,15 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100%; 
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    color: #ffffff;
   }
 
-
+  p {
+    font-size: 2em;
+  }
 
   body {
     display: flex;
@@ -68,7 +73,7 @@ h1, h2 {
 }
 
 a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 form {
