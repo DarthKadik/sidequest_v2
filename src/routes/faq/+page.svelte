@@ -12,5 +12,17 @@
 
 <div class="global-container">
   <Faq id="faq-section" {faqData} />
-  <Footer />
+  <Footer links = {
+      [
+      {
+        label: 'Home',
+        address: '/',
+      },
+      {
+        label: 'Application',
+        address: '/apply',
+      },
+    ]
+    }
+  />
 </div>

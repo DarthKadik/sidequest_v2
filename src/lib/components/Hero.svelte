@@ -49,6 +49,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: 'Poppins', sans-serif;
     }
   
     #hero-details {

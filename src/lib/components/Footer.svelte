@@ -55,6 +55,7 @@
     padding: 2rem 5rem 1rem 5rem;
     background: none;
     color: white;
+    font-family: 'Poppins', sans-serif;
   }
 
   .nav-links,

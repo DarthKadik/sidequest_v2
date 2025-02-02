@@ -14,5 +14,17 @@
 
 <div class="global-container">
   <Application id="signup" {formData} />
-  <Footer />
+  <Footer links = {
+    [
+    {
+      label: 'Home',
+      address: '/',
+    },
+    {
+      label: 'FAQ',
+      address: '/faq',
+    },
+  ]
+  }
+/>
 </div>

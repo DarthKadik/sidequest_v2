@@ -26,6 +26,7 @@
     background: none;
     padding: 80px 20px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
   }
 
   .cta h1 {

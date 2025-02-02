@@ -54,6 +54,27 @@
       gtag('js', new Date());
 
       gtag('config', 'G-YTJFBNYEJR');
+
+      //Prevent form submission w enter
+      document.addEventListener('DOMContentLoaded', () => {
+        const preventEnterSubmit = () => {
+          document.querySelectorAll('form').forEach((form) => {
+            form.addEventListener('keydown', (event) => {
+              if (event.key === 'Enter') {
+                event.preventDefault();
+              }
+            });
+          });
+        };
+
+        preventEnterSubmit();
+
+        const observer = new MutationObserver(() => {
+          preventEnterSubmit();
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
     </script>
   </head>
 
