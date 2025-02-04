@@ -221,3 +221,55 @@ input[type="checkbox"] ~ div {
 input[type="checkbox"]:checked ~ div {
   color: white;
 }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+/* WebKit */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: var(--yellow);
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+/* Mozilla */
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--yellow);
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.slider::-moz-range-track {
+  height: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
