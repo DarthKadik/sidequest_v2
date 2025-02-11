@@ -114,7 +114,7 @@ textarea::placeholder {
 
 textarea {
   resize: none;
-  overflow: hidden;
+  overflow-y: scroll;
   min-height: 7rem;
 }
 
