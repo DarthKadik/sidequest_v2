@@ -112,7 +112,7 @@
     }
 
     .name {
-        color: #BBBBBB;
+        color: #ffffff;
         margin: 10px 0 5px 0;
     }
 	 .card img {
