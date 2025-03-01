@@ -3,7 +3,7 @@
 	import Card from '$lib/components/demo/Card.svelte';
 	import Popup from '$lib/components/demo/Popup.svelte';
 	import projects from '$lib/utils/projects.json';
-    
+
     interface Project {
         name: string;
         title: string;
@@ -72,6 +72,8 @@
                 <Card {project} isGridView={true}  showPopup={showPopup}  />
             {/each}
         </div>
+        <div class="before"></div>
+        <div class="after"></div>
 	{/if}
 
 	{#if selectedProject}
@@ -102,6 +104,7 @@
         padding: 20px;
         width: 22vw;
         flex-shrink: 0;
+        z-index: 10;
     }
 
     .header h1 {
@@ -145,7 +148,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
         gap: 10px;
-        padding: 20px 5px;
+        padding: 30px 5px;
         width: 78vw;
 		height: 100vh;
         overflow-y: scroll;
@@ -163,4 +166,24 @@
 		z-index: 999;
 	}
 
+    .before,
+    .after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .before {
+        top: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .after {
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
 </style>
