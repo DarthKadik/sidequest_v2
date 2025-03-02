@@ -10,9 +10,11 @@
     export let project: Project;
     export let isGridView: boolean = false;
     export let showPopup: (project: Project) => void;
+    export let className: string = '';
+    export let style: string = '';
 </script>
 
-<button type="button" class="card" class:grid-card={isGridView} on:click={() => showPopup(project)}>
+<button type="button" style="{style}" class="card {className}" class:grid-card={isGridView} on:click={() => showPopup(project)}>
     {#if !isGridView}
         <div class="image-container">
             <img src={project.image} alt={project.title} />

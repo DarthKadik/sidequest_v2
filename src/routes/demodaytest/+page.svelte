@@ -2,7 +2,7 @@
 	import Carousel from '$lib/components/demo/Carousel.svelte';
 	import Card from '$lib/components/demo/Card.svelte';
 	import Popup from '$lib/components/demo/Popup.svelte';
-	import projects from '$lib/utils/projects.json';
+    import projects from '$lib/utils/projects.json';
 
     interface Project {
         name: string;
@@ -61,19 +61,21 @@
 
 <div class="wrapper">
 	<div class="header">
-		<h1>sidequest</h1>
-		<p>Projects built with us:</p>
-		<button id="showAllBtn" on:click={() => {
-            isGridView = !isGridView;
-             if (isGridView) {
-                pauseCarousels();
-            } else {
-                resumeCarousels();
-            }
-        }}>
-			{isGridView ? 'Show Carousels' : 'Show All'}
-		</button>
-		<a href="https://mysidequest.xyz" class="back-link">&lt; Back to home</a>
+        <h1>sidequest</h1>
+        <div class="title">
+            <p>S1 Project Library</p>
+            <button id="showAllBtn" on:click={() => {
+                isGridView = !isGridView;
+                if (isGridView) {
+                    pauseCarousels();
+                } else {
+                    resumeCarousels();
+                }
+            }}>
+                {isGridView ? 'Show Carousels' : 'Show All'}
+            </button>
+        </div>
+        <a href="https://mysidequest.xyz" class="back-link">&lt; Back to home</a>
 	</div>
 
 	{#if !isGridView}
@@ -93,8 +95,8 @@
                 </div>
             </div>
         <div class="grid-container">
-            {#each filterProjects(projects) as project (project.id)}
-            <Card {project} isGridView={true} showPopup={showPopup} />
+            {#each filterProjects(projects) as project, index (project.id)}
+                <Card {project} isGridView={true} showPopup={showPopup} style={index < 3 ? 'margin-top: 50px;' : index > filterProjects(projects).length - 4 ? 'margin-bottom: 50px;' : ''} />
             {/each}
             <div class="before"></div>
             <div class="after"></div>
@@ -130,7 +132,8 @@
         padding: 20px;
         width: 22vw;
         flex-shrink: 0;
-        z-index: 10;
+        z-index: 101;
+        align-items: center;
     }
 
     .header h1 {
@@ -148,6 +151,24 @@
     .header p {
         color: #ffc715;
         font-size: 1.5rem;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title p {
+        text-align: center;
+    }
+
+    .title button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     #showAllBtn {
@@ -217,7 +238,7 @@
         display: flex;
     }
 
-    :global(.grid-container) {
+    .grid-container {
         position: relative;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
@@ -247,7 +268,7 @@
         left: 0;
         right: 0;
         height: 100px;
-        z-index: 2000;
+        z-index: 100;
         pointer-events: none;
     }
 
