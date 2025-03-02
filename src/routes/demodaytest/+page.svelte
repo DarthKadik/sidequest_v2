@@ -15,6 +15,8 @@
 	let isGridView: boolean = false;
 	let selectedProject: Project | null = null;
     let carousels: Carousel[] = [];
+    let searchQuery: string = '';
+    let selectedTags: string[] = [];
 
 	function showPopup(project: Project): void {
 		selectedProject = project;
@@ -40,7 +42,21 @@
         });
     }
 
+    function toggleTag(tag: string): void {
+        if (selectedTags.includes(tag)) {
+        selectedTags = selectedTags.filter(t => t !== tag);
+        } else {
+        selectedTags = [...selectedTags, tag];
+        }
+    }
 
+    function filterProjects(projects: Project[]): Project[] {
+        return projects.filter(project => {
+            const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || project.description.toLowerCase().includes(searchQuery.toLowerCase());
+            const matchesTags = selectedTags.length === 0 || selectedTags.every(tag => project.tags.includes(tag));
+            return matchesSearch && matchesTags;
+        });
+    }
 </script>
 
 <div class="wrapper">
@@ -67,13 +83,23 @@
 			<Carousel bind:this={carousels[2]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
 		</div>
 	{:else}
+        <div class="grid-search-container">
+            <div class="search-filter">
+                <input type="text" placeholder="Search..." bind:value={searchQuery} />
+                <div class="tags">
+                    {#each Array.from(new Set(projects.flatMap(project => project.tags))) as tag}
+                        <button type="button" class:selected={selectedTags.includes(tag)} on:click={() => toggleTag(tag)}>{tag}</button>
+                    {/each}
+                </div>
+            </div>
         <div class="grid-container">
-            {#each projects as project (project.id)}
-                <Card {project} isGridView={true}  showPopup={showPopup}  />
+            {#each filterProjects(projects) as project (project.id)}
+            <Card {project} isGridView={true} showPopup={showPopup} />
             {/each}
+            <div class="before"></div>
+            <div class="after"></div>
         </div>
-        <div class="before"></div>
-        <div class="after"></div>
+      </div>
 	{/if}
 
 	{#if selectedProject}
@@ -140,17 +166,65 @@
         background-color: #e6b400;
     }
 
+    .grid-search-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 20px 0 20px;
+        position: relative;
+        width: 100%;
+        height: calc(100vh);
+    }
+
+    .search-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 20px 0 20px;
+        height: calc(30vh - 20px);
+    }
+
+    .search-filter input {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 75%;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 75%;
+    }
+
+    .tags button {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+    }
+
+    .tags button.selected {
+        background-color: #ffc715;
+        color: black;
+    }
+
     :global(.carousel-container) {
         display: flex;
     }
 
     :global(.grid-container) {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
         gap: 10px;
-        padding: 30px 5px;
-        width: 78vw;
-		height: 100vh;
+        padding: 0 5px;
+        width: 100%;
+		height: 70vh;
         overflow-y: scroll;
         margin-left: auto;
 
@@ -169,16 +243,16 @@
     .before,
     .after {
         content: '';
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         height: 100px;
-        z-index: 2;
+        z-index: 2000;
         pointer-events: none;
     }
 
     .before {
-        top: 0;
+        top: 30vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     }
 

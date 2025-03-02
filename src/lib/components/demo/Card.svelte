@@ -49,12 +49,13 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         outline: none;
-    }
+        z-index: 100;
+        }
 
-    .card:hover {
+        .card:hover {
         transform: scale(1.02);
-        border: none;
-    }
+        background: #0d0d0d;
+        }
 
     .card:focus {
        outline: 2px solid #ffc715;

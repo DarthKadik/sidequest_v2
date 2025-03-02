@@ -84,6 +84,11 @@
         width: 26vw;
         padding: 10px;
         flex-shrink: 0;
+        overflow-x: visible;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
     }
 
     .card-container {
@@ -92,7 +97,6 @@
         gap: 20px;
         position: absolute;
         top: 0;
-        left: 0;
         will-change: transform;
         z-index: 1;
     }
