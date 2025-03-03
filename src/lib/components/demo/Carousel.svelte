@@ -12,7 +12,8 @@
 
     export let projects: Project[];
 	export let direction: 'up' | 'down';
-    export let showPopup: (project: Project) => void;;
+    export let showPopup: (project: Project) => void;
+
     let container: HTMLElement | null = null;
     let animation: Animation | null = null;
 
@@ -65,7 +66,7 @@
 
 </script>
 
-<div class="carousel" >
+<div class="carousel">
     <div class="card-container" bind:this={container}>
         {#each Array(2) as _, i}
             {#each (direction === 'up' ? projects : projects.slice().reverse()) as project (project.id)}
@@ -119,5 +120,11 @@
     .after {
         bottom: 0;
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    @media (max-width: 768px) {
+        .carousel {
+            width: 60vw;
+        }
     }
 </style>

@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
 	import Carousel from '$lib/components/demo/Carousel.svelte';
 	import Card from '$lib/components/demo/Card.svelte';
 	import Popup from '$lib/components/demo/Popup.svelte';
@@ -17,6 +18,7 @@
     let carousels: Carousel[] = [];
     let searchQuery: string = '';
     let selectedTags: string[] = [];
+    let isSmallScreen: boolean = false;
 
 	function showPopup(project: Project): void {
 		selectedProject = project;
@@ -57,6 +59,15 @@
             return matchesSearch && matchesTags;
         });
     }
+
+    onMount(() => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        isSmallScreen = mediaQuery.matches;
+
+        mediaQuery.addEventListener('change', (event) => {
+        isSmallScreen = event.matches;
+        });
+    });
 </script>
 
 <div class="wrapper">
@@ -78,13 +89,17 @@
         <a href="https://mysidequest.xyz" class="back-link">&lt; Back to home</a>
 	</div>
 
-	{#if !isGridView}
-		<div class="carousel-container">
-            <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
-			<Carousel bind:this={carousels[1]} projects={projects as Project[]} direction={"up"} showPopup={showPopup} />
-			<Carousel bind:this={carousels[2]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
-		</div>
-	{:else}
+    {#if !isGridView}
+        <div class="carousel-container">
+            {#if isSmallScreen}
+                <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+            {:else}
+                <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+                <Carousel bind:this={carousels[1]} projects={projects as Project[]} direction={"up"} showPopup={showPopup} />
+                <Carousel bind:this={carousels[2]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+            {/if}
+        </div>
+    {:else}
         <div class="grid-search-container">
             <div class="search-filter">
                 <input type="text" placeholder="Search..." bind:value={searchQuery} />
@@ -280,5 +295,29 @@
     .after {
         bottom: 0;
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    @media (max-width: 768px) {
+
+        .header {
+            width: 35vw;
+            padding: 4px 15px 4px 4px;
+        }
+
+        .header p {
+            font-size: 1rem;
+        }
+
+        #showAllBtn {
+            font-size: 0.8rem;
+        }
+
+        .header .back-link {
+            font-size: 0.8rem;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+        }
     }
 </style>

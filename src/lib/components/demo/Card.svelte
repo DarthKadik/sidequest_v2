@@ -141,4 +141,10 @@
         color: #bbbbbb;
         margin-top: 5px;
     }
+
+    @media (max-width: 768px) {
+        .card {
+            width: 60vw;
+        }
+    }
 </style>
