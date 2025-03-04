@@ -1,0 +1,137 @@
+[
+    {
+        "id": "lilya",
+       "name": "Lilya",
+       "title": "Automated poster placing robot",
+       "description":
+           "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
+       "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
+       "tags": ["Tech", "HW", "Non-commercial"]
+   },
+   {
+       "id": "roope",
+       "name": "Roope",
+       "title": "AI Agent for creating AI agents",
+       "description":
+           "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
+       "tags": ["AI", "Automation", "Commercial"]
+   },
+    {
+       "id": "niklas-1",
+        "name": "Niklas",
+        "title": "Interest-based housing incubator",
+        "description":
+            "People should live together with people they share some passion with. Let us help you find your new home.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRL0Hyx3NpOvyntWIuj5RqAjZPu44aaXBDg&s",
+        "tags": ["Housing", "Social", "Commercial"]
+    },
+    {
+        "id": "koda-1",
+        "name": "Koda",
+        "title": "Buttery text-to-speech voice to read bedtime stories",
+        "description":
+            "Max's voice should not be the only buttery one in your life! ButterBuster can be your personal Butter Butler.",
+        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
+        "tags": ["Sound", "Well-being", "Awesome"]
+    },
+    {
+        "id": "moaffak-1",
+        "name": "Moaffak",
+        "title": "Automated rating on executional capability-completeness of vision axis",
+        "description":
+            "A highly sophisticated model that gives you a coordinate where the given person is on these axises based on a single picture.",
+        "image": "https://64.media.tumblr.com/tumblr_m5juj73DJ81qioot0o1_r1_500.gif",
+        "tags": ["AI", "Data Science", "Cool"]
+    },
+    {
+        "id": "lilya-2",
+        "name": "Lilya 2.0",
+        "title": "Automated poster placing robot",
+        "description":
+            "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
+        "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
+        "tags": ["Tech", "HW", "Non-commercial"]
+    },
+    {
+         "id": "roope-2",
+        "name": "Roope 2.0",
+        "title": "AI Agent for creating AI agents",
+        "description":
+            "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
+        "tags": ["AI", "Automation", "Commercial"]
+    },
+    {
+        "id": "niklas-2",
+        "name": "Niklas 2.0",
+        "title": "Interest-based housing incubator",
+        "description":
+            "People should live together with people they share some passion with. Let us help you find your new home.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRL0Hyx3NpOvyntWIuj5RqAjZPu44aaXBDg&s",
+        "tags": ["Housing", "Social", "Commercial"]
+    },
+    {
+        "id": "koda-2",
+        "name": "Koda 2.0",
+        "title": "Buttery text-to-speech voice to read bedtime stories",
+        "description":
+            "Max's voice should not be the only buttery one in your life! ButterBuster can be your personal Butter Butler.",
+        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
+        "tags": ["Sound", "Well-being", "Awesome"]
+    },
+    {
+        "id": "moaffak-2",
+        "name": "Moaffak 2.0",
+        "title": "Automated rating on executional capability-completeness of vision axis",
+        "description":
+            "A highly sophisticated model that gives you a coordinate where the given person is on these axises based on a single picture.",
+        "image": "https://64.media.tumblr.com/tumblr_m5juj73DJ81qioot0o1_r1_500.gif",
+        "tags": ["AI", "Data Science", "Cool"]
+    },
+    {
+         "id": "lilya-l",
+        "name": "Lilya L.",
+        "title": "Automated poster placing robot",
+        "description":
+            "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
+        "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
+        "tags": ["Tech", "HW", "Non-commercial"]
+    },
+    {
+        "id": "roope-r",
+        "name": "Roope R.",
+        "title": "AI Agent for creating AI agents",
+        "description":
+            "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
+        "tags": ["AI", "Automation", "Commercial"]
+    },
+    {
+         "id": "niklas-h",
+        "name": "Niklas H.",
+        "title": "Interest-based housing incubator",
+        "description":
+            "People should live together with people they share some passion with. Let us help you find your new home.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRL0Hyx3NpOvyntWIuj5RqAjZPu44aaXBDg&s",
+        "tags": ["Housing", "Social", "Commercial"]
+    },
+    {
+         "id": "koda-v",
+        "name": "Koda V.",
+        "title": "Buttery text-to-speech voice to read bedtime stories",
+        "description":
+            "Max's voice should not be the only buttery one in your life! ButterBuster can be your personal Butter Butler.",
+        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
+        "tags": ["Sound", "Well-being", "Awesome"]
+    },
+    {
+        "id": "moaffak-a",
+        "name": "Moaffak A.",
+        "title": "Automated rating on executional capability-completeness of vision axis",
+        "description":
+            "A highly sophisticated model that gives you a coordinate where the given person is on these axises based on a single picture.",
+        "image": "https://64.media.tumblr.com/tumblr_m5juj73DJ81qioot0o1_r1_500.gif",
+        "tags": ["AI", "Data Science", "Cool"]
+    }
+]
