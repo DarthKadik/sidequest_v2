@@ -22,7 +22,11 @@
 <button type="button" style="{style}" class="card {className}" class:grid-card={isGridView} on:click={() => showPopup(project)}>
     {#if !isGridView}
         <div class="image-container">
-            <img style="width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
+            {#if project.name.trim() != "Vladimir Surtaev"}
+                <img style="max-width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
+            {:else}
+                <img style="max-width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject2.png`} alt={project.oneliner} />
+            {/if}    
             <div class="fog-overlay"></div>
         </div>
     {/if}
@@ -79,7 +83,7 @@
     }
 .image-container {
         position: relative;
-        display: inline-block;
+        display: block;
         width: 100%;
     }
 

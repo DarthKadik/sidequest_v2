@@ -245,5 +245,44 @@
     "learning": "The biggest learning for me was refining the user experience based on feedback.",
     "contact": "jaakko.petteri.lehto@gmail.com",
     "tags": ["Software", "Available to users"]
+  },
+  {
+    "id": 20,
+    "name": "Vladimir Surtaev",
+    "oneliner": "Single button game",
+    "shortDesc": "A game that can be played with only one button",
+    "image": "https://drive.google.com/file/d/1fBfsEDmG3E9_kYTZUxHCv85Td8l59_KM/view?usp=sharing",
+    "video": "https://youtube.com/embed/7CgxKRttJjU",
+    "longDesc": "This project began with a simple idea: how far can I push a game where the player has only one button? Having had little prior experience with game development, I saw this as the perfect opportunity to finally fulfill my childhood dream—especially since that very dream led me to become a Software Developer.",
+    "projectLink": "https://apple-outrigger-fc3.notion.site/DEMO-PRESS-TO-EXIT-19ef349ab2cd80eebabfdc9c69c3285c?pvs=74",
+    "learning": "You can do stuff in 6 weeks",
+    "contact": "https://www.linkedin.com/in/vladimir-surtaev/",
+    "tags": ["Software", "Game", "Available to users"]
+  },
+  {
+    "id": 21,
+    "name": "Anastasia",
+    "oneliner": "Journals  & 10-day challenges to shape your reality.",
+    "shortDesc": "Printed journals that help you focus on what truly matters.",
+    "image": "https://www.dropbox.com/scl/fi/x66afaow1gz9xu1ar1rjp/IMG_1845.jpg?rlkey=6lz5kncuzjt78qc141cbxa3wb&st=3hzcmc57&dl=0",
+    "video": "https://youtube.com/embed/zb1OU-MpDBE",
+    "longDesc": "Hi! My name is Anastasia and I am doing printed journals that help you focus on what truly matters. \nJoin me on Instagram @10D_journals and get a free pdf-journal to try it out!",
+    "projectLink": "https://www.instagram.com/10d_journals?igsh=MTFwc2lqamx3cnZ2Ng%3D%3D&utm_source=qr",
+    "learning": "",
+    "contact": "Contact me on Instagram @10D_journals or e-mail: asvistova@gmail.com",
+    "tags": ["Crafting", "Wellbeing", "Available to users"]
+  },
+  {
+    "id": 22,
+    "name": "Dimitri Eskelinen",
+    "oneliner": "Generate quizzes based on educational youtube videos",
+    "shortDesc": "Want to test your knowledge on a youtube video? Generate a quiz, answer and get graded to see how well you understood the content.",
+    "image": "https://drive.google.com/drive/folders/1lgqd1_3QZ8xAdtQ8j8Nh1oX03yeEumBn?usp=sharing",
+    "video": "https://youtube.com/embed/aXJM2huqY-Q",
+    "longDesc": "I spend a lot of time watching educational content on youtube (history videos, philosophy lectures, science explainers, that kind of stuff). While it's easy to watch, it's also easy to forget. I wanted a tool that would make my content consumption stickier and help me remember and understand what I watch. Hence the quiz generator. During my day job I've also started developing some prototypes using python and chat gpt, so I wanted to test how far I can push these skills. It turns out very far and even this project was relatively straightforward to create. The result are two versions of this tool. An online version takes the caption file available on youtube and generates the quiz and displays it in your browser (available at: https://quizdom-2uxv.onrender.com/). There is also a local version which stores your files and generates the transcript locally, which generally results in better quizzes but takes a bit longer to generate (available on github: https://github.com/dimppa/quizdom)",
+    "projectLink": "https://quizdom-2uxv.onrender.com/",
+    "learning": "I thought I was sitting on a million-dollar idea and was just too lazy to set it up. It turns out one of the key features I had in mind was not technically feasible. While disappointing, I still got quite far with the other features and am very happy with the result. Now I'm inspired to pursue other ideas and equipped with the experience from this project. The main point is, test, iterate, and validate quickly. ",
+    "contact": "dima.eskelinen@gmail.com",
+    "tags": ["Software", "Available to users"]
   }
 ]

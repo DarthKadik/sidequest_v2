@@ -35,7 +35,7 @@
     ];
 
      const animationTiming = {
-        duration: 200000,
+        duration: 300000,
         iterations: Infinity,
         easing: 'linear'
     };
