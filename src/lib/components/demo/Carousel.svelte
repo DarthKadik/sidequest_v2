@@ -3,10 +3,16 @@
     import { onDestroy, onMount } from 'svelte';
 
     interface Project {
+        id: number;
         name: string;
-        title: string;
-        description: string;
+        oneliner: string;
+        shortDesc: string;
         image: string;
+        video: string;
+        longDesc: string;
+        projectLink: string;
+        learning: string;
+        contact: string;
         tags: string[];
     }
 
@@ -16,6 +22,7 @@
 
     let container: HTMLElement | null = null;
     let animation: Animation | null = null;
+    let randomizedProjects: Project[] = [];
 
     const scrollUp = [
         { transform: 'translateY(0)' },
@@ -55,6 +62,7 @@
     }
 
     onMount(() => {
+        randomizedProjects = direction === 'up' ? projects.slice().sort(() => Math.random() - 0.5) : projects.slice().reverse().sort(() => Math.random() - 0.5);
 		startAnimation();
     });
 
@@ -69,7 +77,7 @@
 <div class="carousel">
     <div class="card-container" bind:this={container}>
         {#each Array(2) as _, i}
-            {#each (direction === 'up' ? projects : projects.slice().reverse()) as project (project.id)}
+            {#each randomizedProjects as project (project.id)}
                 <Card {project} {showPopup} />
             {/each}
         {/each}

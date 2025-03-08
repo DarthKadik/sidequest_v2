@@ -1,9 +1,14 @@
 <script lang="ts">
     interface Project {
         name: string;
-        title: string;
-        description: string;
+        oneliner: string;
+        shortDesc: string;
         image: string;
+        video: string;
+        longDesc: string;
+        projectLink: string;
+        learning: string;
+        contact: string;
         tags: string[];
     }
 
@@ -17,14 +22,14 @@
 <button type="button" style="{style}" class="card {className}" class:grid-card={isGridView} on:click={() => showPopup(project)}>
     {#if !isGridView}
         <div class="image-container">
-            <img src={project.image} alt={project.title} />
+            <img style="width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
             <div class="fog-overlay"></div>
         </div>
     {/if}
     <div class="content">
         <p class="name">{project.name} presents</p>
-        <h2>{project.title}</h2>
-        <p class="desc">{project.description}</p>
+        <h2>{project.oneliner}</h2>
+        <p class="desc">{project.shortDesc}</p>
         <div class="badges">
             {#each project.tags as tag}
                 <span class="badge">{tag}</span>
@@ -38,7 +43,7 @@
         width: 22.5vw;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 15px;
         background-color: #000000;
         border-radius: 15px;
         border: 2px dashed #ffc715;
@@ -120,6 +125,7 @@
     }
 	 .card img {
         width: 100%;
+        max-height: 25vh;
         height: auto;
         border-radius: 10px;
     }

@@ -1,83 +1,249 @@
 [
-    {
-        "id": "lilya",
-       "name": "Lilya",
-       "title": "Automated poster placing robot",
-       "description":
-           "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
-       "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
-       "tags": ["Tech", "HW", "Non-commercial"]
-   },
-   {
-       "id": "roope",
-       "name": "Roope",
-       "title": "AI Agent for creating AI agents",
-       "description":
-           "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
-       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
-       "tags": ["AI", "Automation", "Commercial"]
-   },
-    {
-        "id": "koda",
-        "name": "Koda",
-        "title": "A coffeemaker that keeps track of caffeine consumption",
-        "description":
-            "How much caffeine you drink? You don't know, caffeine content in your coffee? You don't know. This tool knows.",
-        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
-        "tags": ["Coffee", "Drink", "Awesome"]
-    },
-    {
-        "id": "lily",
-       "name": "Lilya",
-       "title": "Automated poster placing robot",
-       "description":
-           "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
-       "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
-       "tags": ["Tech", "HW", "Non-commercial"]
-   },
-   {
-       "id": "roop",
-       "name": "Roope",
-       "title": "AI Agent for creating AI agents",
-       "description":
-           "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
-       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
-       "tags": ["AI", "Automation", "Commercial"]
-   },
-    {
-        "id": "koda-2",
-        "name": "Koda",
-        "title": "A coffeemaker that keeps track of caffeine consumption",
-        "description":
-            "How much caffeine you drink? You don't know, caffeine content in your coffee? You don't know. This tool knows.",
-        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
-        "tags": ["Coffee", "Drink", "Awesome"]
-    },
-    {
-        "id": "lilya-2",
-       "name": "Lilya",
-       "title": "Automated poster placing robot",
-       "description":
-           "Printing 500 posters is trivial, putting them up? Not so much. PostoRobo is here to help.",
-       "image": "https://www.silverpetticoatreview.com/wp-content/uploads/2016/06/kenai-before-his-transformation.jpg",
-       "tags": ["Tech", "HW", "Non-commercial"]
-   },
-   {
-       "id": "roope-2",
-       "name": "Roope",
-       "title": "AI Agent for creating AI agents",
-       "description":
-           "no1 said you have to create AI agents manually, let UwU do it 4 ya o7",
-       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrL0Dkb304CwRDEb5piEZb1RL6wbNt0uy0g&s",
-       "tags": ["AI", "Automation", "Commercial"]
-   },
-    {
-        "id": "koda-2",
-        "name": "Koda",
-        "title": "A coffeemaker that keeps track of caffeine consumption",
-        "description":
-            "How much caffeine you drink? You don't know, caffeine content in your coffee? You don't know. This tool knows.",
-        "image": "https://pbs.twimg.com/media/EiXyG61WsAAUhZE?format=jpg&name=large",
-        "tags": ["Coffee", "Drink", "Awesome"]
-    }
+  {
+    "id": 1,
+    "name": "Anna",
+    "oneliner": "We host Healing Circles because together we plant seeds for change.",
+    "shortDesc": "Our inclusive space creates unity, belonging and wellbeing. Change starts with one person, \none shared story, at one circle at a time.",
+    "image": "https://drive.google.com/thumbnail?id=1AurgVqWOuoSfmdPXKY2kUqnr4FBDyTvj",
+    "video": "https://youtube.com/embed/b26DLeHs3rs",
+    "longDesc": "We are Intersectional Healing Collective. We aren’t just another employee support provider. We bring a healing centred, intersectional and trauma-informed approach for organisations and individuals with emotional intelligence. \nThe truth is, most existing support models when it comes to diversity, equity, inclusion and wellbeing are reactive, not proactive. Those models weren’t built with the needs of minoritised employees in mind. When people don’t feel safe or seen, they disengage because the support doesn't understand the different barriers, challenges and multi-layered discrimination that people experience. This impacts how they are at work and the lives they live. We provide the safe space that fosters united wellbeing.\nWith over 10 years global experience, Intersectional Healing as a Service, is our way of transforming leadership and bringing healing into our world. The healing circles are part of that transformation. \nJoin us in the movement!",
+    "projectLink": "https://www.linkedin.com/company/97208571/",
+    "learning": "Always keep PIVOTING!",
+    "contact": "hello@intersectionalhealing.com",
+    "tags": ["Community", "Wellbeing", "Available to users"]
+  },
+  {
+    "id": 2,
+    "name": "Erkka",
+    "oneliner": "Training AI to find most penis shaped lake",
+    "shortDesc": "Going through all lakes in finland using a custom trained neural network to find penis shaped lakes.",
+    "image": "https://drive.google.com/thumbnail?id=1hTk2FeMj7jwcyRHyGyIpQT-5_rxgq7oN",
+    "video": "https://youtube.com/embed/lnBLOsBkoQQ",
+    "longDesc": "I trained a yolo v8 object detection model using sketches from the internet. Then i used OSM and overpass api to get all lakes in finland above certain area threshold. Then i just detect. The CNN is overfitting a bit but definitely finds some gems.",
+    "projectLink": "https://github.com/zupermiez/thejohnsonproject",
+    "learning": "",
+    "contact": "",
+    "tags": ["Software", "AI", "Personal project"]
+  },
+  {
+    "id": 3,
+    "name": "Daw-Chih Liou",
+    "oneliner": "Analytic AI agent that 10x content marketing ROI",
+    "shortDesc": "Struggling to get traction on YouTube? Oona helps you enhance content packaging using real-time data AI analytics. No more wasted content.",
+    "image": "https://drive.google.com/thumbnail?id=1F-LLiIP5RlnBOinh2GozH6lMnzFhRBQO",
+    "video": "https://youtube.com/embed/fTQ35W_hJZ4",
+    "longDesc": "Struggling to get traction on YouTube? You’re not alone.\n\n99% of creators, startups, and brands face the same challenge.\n\nWe put time, effort, and money into videos—only to get inconsistent results and little traction. The real problem? Social media algorithms are a black box.\n\nAs a full-time creator, I’ve been there. But I cracked the code on how to systematically improve video performance.\n\nSo, I built Oona—an AI-powered agent that helps content creators 10x their ROI by optimizing, troubleshooting, and stacking success with real-time analytics.\n\n🚀 The impact? Our beta users are seeing 2x click-through rates and 40x more views.\n👉 Be among the first to use it. Join the waitlist now: https://oonalab.ai",
+    "projectLink": "https://oonalab.ai",
+    "learning": "",
+    "contact": "https://www.instagram.com/dawchihliou/",
+    "tags": ["Software", "AI", "Available to users"]
+  },
+  {
+    "id": 4,
+    "name": "Vladimir Kuparinen",
+    "oneliner": "OpenEuropeBooks: access any world-dispersed book in2clicks. LEGALLY! ",
+    "shortDesc": "Our solution for Open-Europe books, which facilitates quick legal access to remote libraries through person-to-person book sharing.",
+    "image": "https://drive.google.com/thumbnail?id=1voJYdDQ88kuKIrDbVuP7WUzoOcJw4kr_",
+    "video": "https://www.loom.com/share/55a71091b1244a75a49d292984d26109",
+    "longDesc": "Our solution for Open-Europe books, which facilitates quick legal access to remote libraries through person-to-person book sharing.",
+    "projectLink": "https://docs.google.com/presentation/d/1RqlTJGWPV3ebsdJFkkjra-rVx56btJ5b/edit#slide=id.p1",
+    "learning": "I was stuck during last year - how to market my not-yet-completed project (only MVP was made). Sidequest pushed me / trained how to concisely tell my idea. It brought two first paying users to my project. I'm not so shy any longer to show my project to people & companies.",
+    "contact": "https://www.linkedin.com/in/vladimir-kuparinen-89003359/",
+    "tags": ["Software", "Community", "Available to users"]
+  },
+  {
+    "id": 5,
+    "name": "Samuli and Eppu",
+    "oneliner": "Finding the best neighborhood for your requirements",
+    "shortDesc": "We created a website with a chatbot that allows you to ask about different areas of your city. \n\n\n\n\n\n\n\n",
+    "image": "https://drive.google.com/thumbnail?id=1QaA8tk5qAelLo9yiQMSncylbmGZ5s_mM",
+    "video": "https://youtube.com/embed/CfDOILdUuIs",
+    "longDesc": "We are both students from Tampere University, and last autumn, we came up with an idea to make finding the right residential area easier for people. Our idea evolved a lot over time, and at first, we weren’t sure how to move forward. Then, we discovered this sidequest program and decided to apply. After that, we had a clear vision and the motivation to finally develop our first prototype—and we did it! We hope people can see the potential in our idea and the impact it could have. ",
+    "projectLink": "",
+    "learning": "I believe the biggest learning is that you just need to take action to make things happen.",
+    "contact": "LinkedIn: Samuli Sjöberg and Eppu Hassinen",
+    "tags": ["Software", "AI", "Community"]
+  },
+  {
+    "id": 6,
+    "name": "Ismail Vohra",
+    "oneliner": "Find and Be Found. Build friendships + career in Finland",
+    "shortDesc": "Struggling to fit in and grow your career in Finland? \nGet weekly tips to build real connections and thrive.\nJoin the newsletter today!",
+    "image": "https://drive.google.com/thumbnail?id=1k1r-KsoH1eZIL0BdpA1B3lbsBzHPqZpU",
+    "video": "https://www.youtube.com/embed/cntIDB3p4Nw",
+    "longDesc": "Struggling to fit in and grow your career in Finland? \n\nGet weekly tips and inspiration to build real connections and thrive 💡\n\nStraight to your inbox. Join the newsletter @ Networkeffect.fi\n\nBONUS: Discover 54+ and growing communities across Finland. Join your tribe!\n\nPS. We are building tools, resources and content to help everyone (internationals and locals alike) to build meaningful friendships + thriving career in Finland and actively building new things. Follow us on our website and LinkedIn page to stay up-to-date on all things exciting and upcoming.",
+    "projectLink": "networkeffect.fi",
+    "learning": "",
+    "contact": "ismail.voh@gmail.com",
+    "tags": ["Community", "Available to users"]
+  },
+  {
+    "id": 7,
+    "name": "Sandro",
+    "oneliner": "Run LLM prompts on text in your clipboard.",
+    "shortDesc": "If you use same prompts every day, Kaiboard is the answer. Define shortcut and prompt. Copy some text, press the shortcut and paste result.",
+    "image": "https://drive.google.com/thumbnail?id=1IlfFKwj8K1m4QKL3BTdRbGzHj8w1lXBs",
+    "video": "https://youtube.com/embed/QqBealSlI90",
+    "longDesc": "",
+    "projectLink": "https://kaiboard.com",
+    "learning": "Building the initial prototype is the easy part. Finishing it into actual product that you can sell is different story :D.",
+    "contact": "sandro@rybarix.com",
+    "tags": ["Software", "AI", "Productivity", "Available to users"]
+  },
+  {
+    "id": 8,
+    "name": "Hannes Täyrönen",
+    "oneliner": "From Zero To Working Software",
+    "shortDesc": "My goal was to build a working software tool with AI. These are my first iterations in my software learning journey.",
+    "image": "https://drive.google.com/thumbnail?id=1idlwrD7bcncDe-nZxXGgrKx5fhwo08rp",
+    "video": "https://youtube.com/embed/T5deKmxUL5g",
+    "longDesc": "",
+    "projectLink": "https://ember.lovable.app/",
+    "learning": "You just have to start from somewhere, no matter what your starting point is.\n\nMy first versions during these weeks were pretty scrappy, but they became better after each iteration. With this project, I started to learn more about coding and AI, so this is just the beginning of becoming a founder myself and really using these skills in real life!",
+    "contact": "https://www.linkedin.com/in/hannes-tayronen/",
+    "tags": ["Software", "AI"]
+  },
+  {
+    "id": 9,
+    "name": "Maya Avendaño",
+    "oneliner": "An app to visualise your personal network",
+    "shortDesc": "Orbits is a second brain for who you know and who you meet.",
+    "image": "https://drive.google.com/thumbnail?id=13FwSUcYDuCWAdAri0VlQ3Wp-t5II1U5A",
+    "video": "https://youtube.com/embed/xMwQ-lrPdSk",
+    "longDesc": "Sidequest has given me the motivation to build Orbits into existence - and even get my first revenue ever from a side project! You can check out my profile at orbits.so/maya :)",
+    "projectLink": "https://orbits.so",
+    "learning": "Just ship it! You'll likely learn more from getting it out into the world than by perfecting it in silence.",
+    "contact": "maya@orbits.so or orbits.so/maya for all my deets",
+    "tags": ["Software", "Community", "Available to users"]
+  },
+  {
+    "id": 10,
+    "name": "Jasmine Xie / bluet87",
+    "oneliner": "Build one costume piece to kick off a longer-term project",
+    "shortDesc": "I patterned and made a replica of a cloak from the TV series Arcane for an upcoming cosplay.",
+    "image": "https://drive.google.com/thumbnail?id=14M4_wC_WRP4JedSdeVa7mCEp_fCDXHvj",
+    "video": "https://youtube.com/embed/cgm1Arf7vYA",
+    "longDesc": "I'm a maker and cosplayer based in Helsinki, and for Sidequest S1 I decided to kick-start my next big cosplay project and make Sevika's cloak from the animation series Arcane. The process involved lots of time spent drafting patterns, designing custom files for the laser cutter, laser cutting fabric appliques, and ironing, and I'm delighted that it's done and ready for my next convention!",
+    "projectLink": "https://instagram.com/bluet87",
+    "learning": "",
+    "contact": "https://instagram.com/bluet87",
+    "tags": ["Crafting", "Personal", "Personal project"]
+  },
+  {
+    "id": 11,
+    "name": "Lakshay Setia",
+    "oneliner": "Productivity & Webtime Tracker",
+    "shortDesc": "A Chrome extension to track time spent on websites with analytics, personalization & a website blocker for better productivity.",
+    "image": "https://drive.google.com/thumbnail?id=1AWSip0JRga3YbiG0CTlc5hkcGDw1KUhV",
+    "video": "https://youtube.com/embed/yWYhCQ2myh8",
+    "longDesc": "Hey, I’m a recent CS grad, and there were times when I felt like my time just disappeared. At the end of the day, I didn’t feel productive, and I had no clue where my hours actually went.\n\nThat’s what led me to create ProdNx - A Productivity & Web time Tracker Chrome extension! 🚀\n\nWith ProdNx, you can see exactly how much time you spend on different websites. It provides in-depth insights, detailed graphs, and analytics to help you understand your browsing habits. You can even personalize your productivity by marking sites as productive or distracting.\n\n✨ Key Features:\n✅ Screen Time Tracking – See your daily, weekly, and monthly stats, along with averages.\n✅ Website Insights – Get detailed analytics on where your time really goes.\n✅ Personalized Productivity – Customize which sites count as productive or distracting.\n✅ Built-in Website Blocker – Reduce distractions and stay on track.\n\nWhat started as a small project quickly turned into something bigger. Initially, I built it for myself, but then I decided to share it with the world. 100 people started using it, which gave me the motivation to improve it further. Now, with 400+ downloads and 200+ active users, it’s growing every day!\n\nIt even got featured on the Chrome Web Store, which was a huge milestone! Hopefully, we’ll hit four-digit users soon.\n\nThis journey has been fun and exciting, and I’d love for you to try it out! Let me know what you think. 🚀🎉",
+    "projectLink": "https://chromewebstore.google.com/detail/ihfjboopehfdmedfagockddklomdmglh",
+    "learning": "One of the biggest takeaways for me was gaining the confidence to put my work out there. I was always focused on improving my project rather than marketing or sharing it with people. Sidequest gave me the external push I needed to step outside my comfort zone and actually showcase what I built.\n\nWithout this, I probably would’ve spent months just refining things instead of getting real users and feedback. Now, I realize how important it is to share early, iterate, and grow. Super grateful for that lesson! 🚀",
+    "contact": "setia.lakshay@outlook.com",
+    "tags": ["Software", "Productivity", "Available to users"]
+  },
+  {
+    "id": 12,
+    "name": "Carolyn Cole",
+    "oneliner": "DIY Felt Patch Craft Kits :)",
+    "shortDesc": "The DIY felt patch kits have everything you need to make a fun handmade craft",
+    "image": "https://drive.google.com/thumbnail?id=1xB-tSWgFEBbpUbttOYMs6Cd1SsOufLLb",
+    "video": "https://youtube.com/embed/rwQ6xtHL1P4",
+    "longDesc": "",
+    "projectLink": "",
+    "learning": "",
+    "contact": "IG: @TwoBugsCrafts",
+    "tags": ["Crafting", "DIY"]
+  },
+  {
+    "id": 13,
+    "name": "Kullah Anderson",
+    "oneliner": "All your haircut history in one app",
+    "shortDesc": "Whaddya want? Umm. Ah! Here's what I want!\nWhaddaHair to the rescue. Show the stylist what you want with visual history!",
+    "image": "https://drive.google.com/thumbnail?id=153yYdfDuycd5lGbW1a78nvz7ICSNkvFC",
+    "video": "https://youtube.com/embed/anVjqIMh6a0",
+    "longDesc": "The project is a long time coming.\nI have had the idea for some years.\nI would touch it and dabble a bit and then \"put it away.\"\nI did not get to where I wanted, and I did get further.\nSo despite imposter syndrome and doubts I am proud to have taken the project further than I ever have before.\n(Thanks, Sidequest, for 'getting this out of me.')",
+    "projectLink": "",
+    "learning": "You can do it!\nWhen you put even a bit more focus on a project or idea, positive things can happen.\nIgnore that inner voice that says \"nah, you can't make a demo video.\"\nIncremental is okay. It does not have be revolutionary from the get go.\nBe kind to yourself - remember there are other people out there going through something similar.",
+    "contact": "kanderso66@gmail.com or via LinkedIn request to connect",
+    "tags": ["Software"]
+  },
+  {
+    "id": 14,
+    "name": "Kokoe and Ksenija",
+    "oneliner": "Community cafe in Helsinki that sells art, books and vintage clothing.",
+    "shortDesc": "We are passionate about creating a living room type of cafe/bar for everyone in the central area of Helsinki where students can sell art.",
+    "image": "https://drive.google.com/thumbnail?id=1AQ_hYVsFFR0GBBVvDHGG665aDyOF15wA",
+    "video": "https://youtube.com/embed/TrPmDSalgYI",
+    "longDesc": "Welcome to Kaunokainen community cafe page. We are Aalto University students completing our @sidequest. Our idea is to create a new café and bar in Helsinki, where connection and creativity come together. Here, we blend vintage clothing, books, and art with cozy seating, natural light, and a welcoming atmosphere. It’s a space for everyone to interact, express themselves, and explore, whether you're sharing stories over coffee, browsing our curated collection, or enjoying a cold drink in the evening.\n\nWe believe in a space that’s ever-evolving—where furniture moves, events unfold, and new ideas are welcomed. At Kaunokainen, we invite you to be part of the journey, whether you’re looking to shop, perform, or just connect with others.\n\nFollow us on Instagram to stay updated and join in on the fun—we can’t wait to see what we’ll create together!",
+    "projectLink": "",
+    "learning": "",
+    "contact": "ksustinovich@gmail.com or @kaunokainencafe",
+    "tags": ["Community"]
+  },
+  {
+    "id": 15,
+    "name": "Ruslan Gainutdinov",
+    "oneliner": "Self-host your apps in one click",
+    "shortDesc": "Buy any server and deploy apps to it in seconds. We handle all the DevOps so you can focus on build your next unicorn product.",
+    "image": "https://drive.google.com/thumbnail?id=1kilzmWXcncJ1nBvvd4pDokAcCdWHHyFr",
+    "video": "https://youtube.com/embed/TSrtMRTxmck",
+    "longDesc": "DollarDeploy deploys your NextJS, Python, Docker, AI or open-source apps to your own server in a few clicks. We make cloud providers interchangeable, with simple pricing and no surprise bills. DollarDeploy handles the complexity of running things right while you focus on your product. And our integrations with DataCrunch, DigitalOcean and Hetzner makes managing servers and running apps incredibly easy.",
+    "projectLink": "https://dollardeploy.com",
+    "learning": "Focus on one thing at the time",
+    "contact": "Join DollarDeploy Discord where we always happy to chat with you! https://discord.gg/BHbfmaAGb7",
+    "tags": ["Software", "Available to users"]
+  },
+  {
+    "id": 16,
+    "name": "AI Research Agent (Venture Capital)",
+    "oneliner": "Automating (VC) analysts' workflow in market research.",
+    "shortDesc": "AI agent to automate manual parts of research for investment analysts. Solution combines elegant tech to find insights beyond databases.",
+    "image": "https://drive.google.com/thumbnail?id=1JARJD-pxgID2vl7zcFtcEqpt7OmOknMC",
+    "video": "https://youtube.com/embed/ISpWy3NUnkc",
+    "longDesc": "",
+    "projectLink": "",
+    "learning": "Teamwork!",
+    "contact": "matti.rautio7@gmail.com, peetu.kupiainen9@gmail.com",
+    "tags": ["Software", "AI", "Productivity"]
+  },
+  {
+    "id": 17,
+    "name": "Rasmus",
+    "oneliner": "AI assistant for dumbphone users",
+    "shortDesc": "Lightfriend gives dumbphone users ability to check information, songs, email, calendar, messaging apps etc while on the go.",
+    "image": "https://drive.google.com/thumbnail?id=1xbOKpZNQwnphe2obv0bjNGHemw5YoYLW",
+    "video": "https://youtube.com/embed/u143KzrnT-U",
+    "longDesc": "Hey, I'm Rasmus and I've been dumbphone user for 3 years now and while I love it, there are situations where I wish I had access to some tool or I missed some important whatsapp message or email. Now I'm trying to build those tools for the dumbphone using the text and voice calling interface since AI has gotten good enough to understand most of the time what I'm asking.",
+    "projectLink": "https://lightfriend.quest",
+    "learning": "My biggest learning was that you can just show off half baked products and people might still be excited to try them out and help you.",
+    "contact": "rasmus@ahtava.com or tg: @ahtavarasmus",
+    "tags": ["Software", "AI", "Available to users"]
+  },
+  {
+    "id": 18,
+    "name": "Satyaki Roy",
+    "oneliner": "3SG: Sustainability made simple, fun, and relatable",
+    "shortDesc": "Sustainability may be hard to achieve but shouldn't be hard to understand, our games can help you to use your skills to make a difference!",
+    "image": "https://drive.google.com/thumbnail?id=1Zh_s9dxM-XLpb7QN9rBsau95Zch0j2iw",
+    "video": "https://youtube.com/embed/fV_Q8fj2-G4",
+    "longDesc": "Right now there is a lot of urgency to tackle sustainability issues, but people are not able to understand how they can contribute to solving these, even though they are in some way working on similar topics. In a world where money and resources are falling short to tackle these problems, all of us must step up. The project is meant to come up with games which firstly gives people the confidence that they are equipped to take on sustainability challenges, then go on to make sustainability concepts fun and easy to understand, as they embark on their own journey of making an impact through their work. We do not need to rely on experts when we can do a lot ourselves.",
+    "projectLink": "https://www.linkedin.com/company/3sg-solutions/about/",
+    "learning": "Thinking more can bring hesitation often, it's often good to do things first and then reflect, while getting your ideas going",
+    "contact": "https://www.linkedin.com/in/satyaki-roy-b83587162/",
+    "tags": ["Sustainability"]
+  },
+  {
+    "id": 19,
+    "name": "Jaakko Lehto",
+    "oneliner": "A 3D printing and modeling service website",
+    "shortDesc": "A simple and fast way to request 3D prints, making it easier than ever to bring ideas to life.",
+    "image": "https://drive.google.com/thumbnail?id=1MPbqa9LOuzQWek9KhtDcnW3mUovqooIJ",
+    "video": "https://youtube.com/embed/R1-jOKjxOik",
+    "longDesc": "",
+    "projectLink": "https://www.jaakkolehto.com/",
+    "learning": "The biggest learning for me was refining the user experience based on feedback.",
+    "contact": "jaakko.petteri.lehto@gmail.com",
+    "tags": ["Software", "Available to users"]
+  }
 ]

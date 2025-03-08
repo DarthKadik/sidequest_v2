@@ -6,10 +6,15 @@
     import projects from '$lib/utils/projects.json';
 
     interface Project {
+        id: number;
         name: string;
-        title: string;
-        description: string;
-        image: string;
+        oneliner: string;
+        shortDesc: string;
+        video: string;
+        longDesc: string;
+        projectLink: string;
+        learning: string;
+        contact: string;
         tags: string[];
     }
 
@@ -54,7 +59,7 @@
 
     function filterProjects(projects: Project[]): Project[] {
         return projects.filter(project => {
-            const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || project.description.toLowerCase().includes(searchQuery.toLowerCase());
+            const matchesSearch = project.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) || project.longDesc.toLowerCase().includes(searchQuery.toLowerCase()) || project.name.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesTags = selectedTags.length === 0 || selectedTags.every(tag => project.tags.includes(tag));
             return matchesSearch && matchesTags;
         });
@@ -75,6 +80,7 @@
         <h1>sidequest</h1>
         <div class="title">
             <p>S1 Project Library</p>
+            <p  class="hidden-on-desktop" style="color: white; text-align: left; font-size: 0.7em; width: 75vw;">We are working on making this page available for smaller screen sizes, but in the meantime, please use a bigger screen!</p>
             <button id="showAllBtn" on:click={() => {
                 isGridView = !isGridView;
                 if (isGridView) {
@@ -90,15 +96,15 @@
 	</div>
 
     {#if !isGridView}
-        <div class="carousel-container">
-            {#if isSmallScreen}
-                <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
-            {:else}
-                <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
-                <Carousel bind:this={carousels[1]} projects={projects as Project[]} direction={"up"} showPopup={showPopup} />
-                <Carousel bind:this={carousels[2]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
-            {/if}
-        </div>
+            <div class="carousel-container">
+                {#if isSmallScreen}
+                    <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+                {:else}
+                    <Carousel bind:this={carousels[0]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+                    <Carousel bind:this={carousels[1]} projects={projects as Project[]} direction={"up"} showPopup={showPopup} />
+                    <Carousel bind:this={carousels[2]} projects={projects as Project[]} direction={"down"} showPopup={showPopup} />
+                {/if}
+            </div>
     {:else}
         <div class="grid-search-container">
             <div class="search-filter">
@@ -110,9 +116,9 @@
                 </div>
             </div>
         <div class="grid-container">
-            {#each filterProjects(projects) as project, index (project.id)}
-                <Card {project} isGridView={true} showPopup={showPopup} style={index < 3 ? 'margin-top: 50px;' : index > filterProjects(projects).length - 4 ? 'margin-bottom: 50px;' : ''} />
-            {/each}
+                {#each filterProjects(projects) as project, index (project.id)}
+                    <Card {project} isGridView={true} showPopup={showPopup} style={index < 3 ? 'margin-top: 50px;' : index > filterProjects(projects).length - 4 ? 'margin-bottom: 50px;' : ''} />
+                {/each}
             <div class="before"></div>
             <div class="after"></div>
         </div>
@@ -126,6 +132,11 @@
 </div>
 
 <style>
+
+    .hidden-on-desktop {
+        display: none;
+    }   
+
 	 :global(body) {
         background-color: black;
         font-family: 'Poppins', sans-serif;
@@ -159,7 +170,7 @@
 
     .header .back-link {
         text-decoration: none;
-        color: #ffc715;
+        color: #bbbbbb;
         font-size: 1rem;
     }
 
@@ -318,6 +329,57 @@
 
         .header h1 {
             font-size: 1.3rem;
+        }
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tags {
+            display: none;
+        }
+
+        .wrapper {
+            flex-direction: row;
+        }
+
+        .header {
+            width: 30vw;
+            padding: 20px 10px 20px 10px;
+        }
+
+        .search-filter {
+            height: auto;
+        }
+
+        .grid-search-container {
+            height: auto;
+        }
+
+        .centralizer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .before {
+            display: none;
+        }
+
+        .header {
+            width: 100vw;
+        }
+
+        #showAllBtn {
+            display: none;
+        }
+
+        .hidden-on-desktop {
+            display: block;
         }
     }
 </style>
