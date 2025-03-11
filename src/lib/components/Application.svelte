@@ -177,7 +177,7 @@
 
   h2 {
     font-size: 2.5rem;
-    color: var(--red);
+    color: var(--yellow);
     margin-bottom: 1rem;
     text-align: center;
     font-family: "Almarai", serif;
@@ -202,7 +202,7 @@
     gap: 1.5rem;
     max-width: 700px;
     margin: 0 auto;
-    border-left: 2px solid var(--red);
+    border-left: 2px solid var(--yellow);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 

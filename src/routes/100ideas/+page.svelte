@@ -1,9 +1,14 @@
 <script>
     import Ideas from '$lib/components/100ideas.svelte';
     import DefaultFooter from '$lib/components/DefaultFooter.svelte';
+    import ideas from '$lib/utils/ideas.json';
 
-    export let data;
-    const { ideaData } = data;
+    // Use ideas from JSON file
+    const ideaData = {
+        Heading: ideas.data.Heading,
+        Description: ideas.data.Description,
+        ideas: ideas.data.ideas
+    };
 </script>
 
 <svelte:head>

@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 
-
-
 :root {
-    --red: #FFC715;
     --yellow: #FFC715;
+    --black: #000000;
     --gray: #808285;
     --darkgray: #ffffff80;
-  }
+}
 
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
+}
 
 html,
 body {
@@ -28,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-  body {
+body {
     background: #0d0d0d;
     line-height: 1.6;
     height: 100%;
@@ -36,20 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
 }
-
-
 
 .global-container {
     min-height: 100%;
-      background: 
-              radial-gradient(circle at bottom right, rgba(243, 167, 18, 0.5), transparent 30%);
+    background: radial-gradient(circle at bottom right, rgba(243, 167, 18, 0.5), transparent 30%);
 }
 
 h2, h3, h4 {
@@ -58,218 +46,222 @@ h2, h3, h4 {
 }
 
 h1, h2 {
-  font-family: "Almarai", serif;
+    font-family: "Almarai", serif;
 }
 
 .card p {
-  color: white;
+    color: white;
 }
 
 a {
-  color: #ffffff;
+    color: #ffffff;
 }
 
-/*
-Form styling only from here
-*/
-
+/* Form styling only from here */
 form {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400; 
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-  border-left: 2px solid var(--red);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-left: 2px solid var(--yellow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 input,
 textarea {
-  padding: 0.8rem;
-  margin: 0.8rem 0 1.2rem;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 4px;
-  width: 100%;
-  color: #ffffff;
-  transition: all 0.2s ease-in-out;
+    padding: 0.8rem;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid rgba(243, 167, 18, 0.4);
+    outline: 2px solid rgba(243, 167, 18, 0.4);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(255, 255, 255 , 0.7);
+    color: rgba(255, 255, 255 , 0.7);
 }
 
 textarea {
-  resize: none;
-  overflow-y: scroll;
-  min-height: 7rem;
+    resize: none;
+    overflow-y: scroll;
+    min-height: 7rem;
 }
 
 form button {
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: var(--yellow);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #ffffff;
-  transition: all 0.3s ease;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 form button:hover {
-  background-color: #d98c00;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(243, 167, 18, 0.4);
+    background-color: #d98c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(243, 167, 18, 0.4);
 }
 
 input[type="file"]::file-selector-button {
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: var(--yellow);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #ffffff;
-  transition: all 0.3s ease;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 input[type="file"]::file-selector-button:hover {
-  background-color: #d98c00;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(243, 167, 18, 0.4);
+    background-color: #d98c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(243, 167, 18, 0.4);
 }
 
 form button:disabled {
-  background-color: #d98c00;
-  cursor: not-allowed;
+    background-color: #d98c00;
+    cursor: not-allowed;
 }
 
 input[type="file"]::file-selector-button:disabled {
-  background-color: #d98c00;
-  cursor: not-allowed;
+    background-color: #d98c00;
+    cursor: not-allowed;
 }
 
 input[type="checkbox"] {
-  appearance: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  position: relative;
-  border: none;
-  border-radius: 4px;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border: none;
+    border-radius: 4px;
 }
 
 input[type="checkbox"]:checked::before {
-  content: '✔';
-  position: absolute;
-  top: 0;
-  left: 4px;
-  font-size: 16px;
-  color: var(--yellow);
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-size: 16px;
+    color: var(--yellow);
 }
 
 input[type="radio"] {
-  appearance: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  display: inline-block;
-  position: relative;
-  border: none;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    border: none;
 }
 
 input[type="radio"]:checked::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--yellow);
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--yellow);
 }
 
 input[type="radio"] ~ div {
-  color: var(--darkgray);
+    color: var(--darkgray);
 }
 
 input[type="radio"]:checked ~ div {
-  color: white;
+    color: white;
 }
 
 input[type="checkbox"] ~ div {
-  color: var(--darkgray);
+    color: var(--darkgray);
 }
 
 input[type="checkbox"]:checked ~ div {
-  color: white;
+    color: white;
 }
 
 .slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;  
-  background: rgba(255, 255, 255, 0.1);
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
 
 .slider:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .slider:focus {
-  outline: none;
+    outline: none;
 }
 
 /* WebKit */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%; 
-  background: var(--yellow);
-  cursor: pointer;
-  margin-top: -5px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: var(--yellow);
+    cursor: pointer;
+    margin-top: -5px;
 }
 
 /* Mozilla */
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: var(--yellow);
-  cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--yellow);
+    cursor: pointer;
 }
 
 .slider::-webkit-slider-runnable-track {
-  height: 15px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
+    height: 15px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .slider::-moz-range-track {
-  height: 15px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
+    height: 15px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.standard-text {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    text-align: justify;
 }

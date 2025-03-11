@@ -100,9 +100,9 @@
 
   .full-btn {
     color: #ffffff;
-    background: var(--red);
+    background: var(--yellow);
     border: none;
-    border: 2px solid var(--red);
+    border: 2px solid var(--yellow);
   }
 
   .outline-btn {

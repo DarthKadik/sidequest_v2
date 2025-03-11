@@ -20,7 +20,7 @@
     font-family: "Almarai", serif;
     font-weight: 700;
     font-size: 2.5rem;
-    color: var(--red);
+    color: var(--yellow);
     margin-bottom: 50px;
   }
 
@@ -41,7 +41,7 @@
     top: 0;
     width: 3px;
     height: 100%;
-    background: var(--red);
+    background: var(--yellow);
   }
 
   .timeline-step {
@@ -63,7 +63,7 @@
 
   .timeline-step h3 {
     font-size: 1.3rem;
-    color: var(--red);
+    color: var(--yellow);
     margin-left: 38px;
     line-height: 28.17px;
   }
@@ -83,7 +83,7 @@
     width: 25px;
     height: 25px;
     background: #0a0a0a;
-    border: 2px solid var(--red);
+    border: 2px solid var(--yellow);
     border-radius: 50%;
   }
 

@@ -36,7 +36,7 @@
 
   .faq h2 {
     font-size: 2.5rem;
-    color: var(--red);
+    color: var(--yellow);
     margin-bottom: 50px;
     font-family: "Almarai", serif;
     font-weight: 700;
@@ -50,7 +50,7 @@
     flex-direction: column;
     gap: 20px;
     border-radius: 8px;
-    border-left: 2px solid var(--red);
+    border-left: 2px solid var(--yellow);
   }
 
   .card {
@@ -64,7 +64,7 @@
 
   .card h4 {
     font-size: 1.2rem;
-    color: var(--red);
+    color: var(--yellow);
     margin-bottom: 10px;
   }
 
@@ -107,9 +107,9 @@
 
   .full-btn {
     color: #ffffff;
-    background: var(--red);
+    background: var(--yellow);
     border: none;
-    border: 2px solid var(--red);
+    border: 2px solid var(--yellow);
   }
 
 

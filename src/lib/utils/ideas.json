@@ -1,0 +1,213 @@
+{
+    "data": {
+      "id": 5,
+      "documentId": "rl0wihfcexz5ooojffeh8opu",
+      "ideas": [
+        {
+          "Ideas": [
+            "google chrome extension to easily block or unblock all images on a page.",
+            "software extension or app that shows you a list of the copied items on a clipboard.",
+            "ancient language learning app.",
+            "ai app providing context to your bookmarks.",
+            "meal plans according to your habits + mood.",
+            "app that helps ppl find the perfect houseplant based on their space and lifestyle.",
+            "interactive art that changes based on your mood.",
+            "app showing what music others are listening to.",
+            "job app that works like tinder.",
+            "ai golf swing tracker that gives feedback based on pro golfers.",
+            "cam-based mood analysis app that curates content.",
+            "vr tourism based on google street views.",
+            "chrome extension that auto-fetches titles, view counts, length, and likes for youtube videos and displays it when mousing over links to youtube on other sites.",
+            "a search function specifically designed for retrieving deleted reddit posts, comments, and threads.",
+            "an extension that displays a small stock chart when a recognized stock ticker symbol is hovered over, enhancing the user's browsing experience on business/market-oriented subreddits.",
+            "a url shortening service that provides users with a random url link that can either redirect to the original page or a randomly selected page from the list.",
+            "a browser tracking randomizer portal that mixes up users' tracking information with noise, creating unique profiles for browsing sessions to thwart unauthorized tracking.",
+            "a screensaver that plays and resumes videos from a folder during the screensaver time-frame.",
+            "personalized news curation service, delivering the top stories in the user's favorite categories in a summary format.",
+            "a tool that allows users to sync a windows folder with an imgur album, ensuring that both have the same images at all times.",
+            "automated program/site that logs into specified accounts periodically to prevent them from being deleted due to inactivity.",
+            "a script that displays the timestamp of the last page refresh, providing users with real-time information on when the page content was last updated.",
+            "a client-side file upload utility that is user-friendly, extremely reliable, and compatible with various server configurations, allowing for seamless data transfer even in the event of network outages or system restarts.",
+            "a chrome extension that automatically removes followers on instagram after a certain period of inactivity.",
+            "a reddit tool that automatically hides link-based posts to filter and prioritize text-based posts.",
+            "a collaborative social blacklist where users can share and dislike products/services they had a bad experience with.",
+            "a semantic search engine designed to help users find time-sensitive events efficiently."
+          ],
+          "Category": "software"
+        },
+        {
+          "Ideas": [
+            "niche online vintage thrift store by the decades.",
+            "high quality vintage graphic design prints.",
+            "subscription box for niche hobbies.",
+            "clothing service for traveling.",
+            "campervan marketplace rental.",
+            "shirataki noodle company.",
+            "gourmet s'more kits for fancy people.",
+            "monthly facial masks targeted for men.",
+            "store selling beautiful bindings of classic books.",
+            "home cooked meal delivery.",
+            "subscription box for international snacks and treats.",
+            "airbnb but specifically for off-the-grid places.",
+            "subscription box for niche book categories.",
+            "a welcome mat that rings the doorbell when stood on for a set time."
+          ],
+          "Category": "direct-to-consumer"
+        },
+        {
+          "Ideas": [
+            "24/7 music stream of all of the new ai songs.",
+            "kinetic sculpture that creates music while it moves.",
+            "ar music visualizer.",
+            "music created w/ brainwaves using neurosity.",
+            "art rave -- edm music w/ immersive ai art.",
+            "artwork made out of transistor boards.",
+            "ai music sampling app.",
+            "30 days of ai-generated art challenges.",
+            "ai generated dance routines.",
+            "photography series of the world's best bathrooms.",
+            "vision pro app for immersive + guided tours of famous art installations."
+          ],
+          "Category": "music/art"
+        },
+        {
+          "Ideas": [
+            "robot that collects dog turds in sf (yes, it's a problem here).",
+            "water bottle tracks and reminds about hydration.",
+            "a small phone without a screen, emphasizing on battery life and voice control.",
+            "noise-suppression system for lawnmowers and gas engines in residential areas.",
+            "affordable water purifying systems.",
+            "automated mushroom farming.",
+            "robot mma sparring.",
+            "ai coffee truck that drives around serving coffee.",
+            "self-cleaning litter box for cats.",
+            "home gardening robot.",
+            "toaster that makes toast art.",
+            "luggage that follows you around in the airport."
+          ],
+          "Category": "hardware"
+        },
+        {
+          "Ideas": [
+            "apple vision pro yoga studio.",
+            "plant-based meal planning app.",
+            "mindfulness-based stress reduction app.",
+            "custom blended essential oils.",
+            "personalized wellness coaching app.",
+            "online platform for guided meditations.",
+            "healthy snack subscription for the office.",
+            "custom workout routine generator.",
+            "online platform for renting workout equipment.",
+            "ai-powered skincare recommendation app."
+          ],
+          "Category": "health & wellness"
+        },
+        {
+          "Ideas": [
+            "adaptive learning app for special needs kids.",
+            "mobile app for learning coding through gaming.",
+            "language learning via character-based games.",
+            "subscription box with science experiments for kids.",
+            "apple vision pro history lessons.",
+            "diy robotics kit for teens.",
+            "app teaching finance and investment basics.",
+            "cultural exchange student networking app.",
+            "app connecting students with tutors in real-time.",
+            "online platform for learning magic tricks.",
+            "ai that gives feedback on drawings and art in general."
+          ],
+          "Category": "education & learning"
+        },
+        {
+          "Ideas": [
+            "personalized home decor subscription.",
+            "smart, modular furniture that adapts to small living spaces.",
+            "subscription box for monthly, curated selections of international beauty and skincare products.",
+            "smart home gadget rental service.",
+            "app for organizing recipes from various sources.",
+            "artesian candle subscription service.",
+            "online custom furniture retailer.",
+            "ai-based home organizing app.",
+            "smart pet toys.",
+            "app for planning & visualizing home renovations.",
+            "indoor microgreen garden kit.",
+            "personalized book recommendation subscription."
+          ],
+          "Category": "home and lifestyle"
+        },
+        {
+          "Ideas": [
+            "video summarizing the brief history of the human race for alien viewers curious about our culture and achievements.",
+            "subscription box for board game enthusiasts.",
+            "remaking old video games to enable multiplayer gameplay over the internet, allowing people to relive nostalgic gaming experiences with friends who are located in different places.",
+            "ar city scavenger hunt app.",
+            "apple vision pro arcade games.",
+            "personalized murder mystery subscription box.",
+            "app for creating and sharing custom card games.",
+            "ai generated role-playing game scenarios.",
+            "app for finding local game nights and tournaments.",
+            "puzzle solving app with real prizes.",
+            "mobile game teaching musical instrument basics.",
+            "platform for hosting virtual book clubs."
+          ],
+          "Category": "games & entertainment"
+        },
+        {
+          "Ideas": [
+            "a coffee place specializing in delivery services, targeting a large college campus to cater to the needs of students who may not have the time to visit a physical coffee shop.",
+            "personalized recipe box delivery.",
+            "diy cheese making kit.",
+            "non-vegan and glutenous meal delivery service.",
+            "artisan tea blend subscription.",
+            "online cooking class platform.",
+            "homemade hot sauce company.",
+            "craft beer brewing equipment rental.",
+            "ai-based wine pairing app.",
+            "monthly mystery global snack box.",
+            "app connecting farmers with local consumers."
+          ],
+          "Category": "food & beverage"
+        },
+        {
+          "Ideas": [
+            "personalized pet toy subscription box.",
+            "gps tracking collar for pets.",
+            "pet meal delivery service.",
+            "mobile app for pet training.",
+            "biodegradable pet products.",
+            "subscription box for bird watching enthusiasts.",
+            "luxury pet furniture retailer.",
+            "dog walking app for local dog walkers.",
+            "ai-based pet health tracker.",
+            "service for planning pet-friendly vacations."
+          ],
+          "Category": "pets & animals"
+        },
+        {
+          "Ideas": [
+            "subscription box to best snacks from diff countries.",
+            "superhuman for dms.",
+            "app to leave audio messages to strangers.",
+            "ufo sightings maps.",
+            "brokerage service for 3rd party amzn sellers.",
+            "tiktok channel that debunks popular conspiracies.",
+            "moving company catered to specific demographics.",
+            "hydroponic herb gardens. compact + automated.",
+            "content like cultural tutor but for computer history.",
+            "wiki for active digital nomad visa programs.",
+            "an uber-like service that allows entrepreneurs to hire loiterers to make businesses look busy.",
+            "providing a service that digitizes and serves sent-in dvds, cds, documents, and tapes, allowing users to access their data online or through physical copies."
+          ],
+          "Category": "random af"
+        }
+      ],
+      "createdAt": "2025-01-06T17:12:38.221Z",
+      "updatedAt": "2025-01-06T17:52:04.129Z",
+      "publishedAt": "2025-01-06T17:52:04.153Z",
+      "Heading": "100+ ideas to build rn",
+      "Description": "if you don't have an idea, pick one and start building it during nights and weekends.\n\nnights & weekends starts jan 27. apply with any of the ideas below."
+    },
+    "meta": {
+  
+    }
+  }
