@@ -1,11 +1,18 @@
-<script>
+<script lang="ts">
     // @ts-ignore
-    export let id, ideaData
+    export let id: string;
+    export let ideaData: {
+        Heading: string;
+        Description: string;
+        ideas: { Category: string; Ideas: string[] }[];
+    };
     
     // Helper function to get starting index for each category
     // @ts-ignore
     function getStartIndex(categoryIndex) {
+        console.log("getStartIndex called with categoryIndex:", categoryIndex);
         let count = 1;
+        console.log(ideaData);
         for (let i = 0; i < categoryIndex; i++) {
             // @ts-ignore
             count += ideaData?.ideas[i]?.Ideas?.length || 0;
@@ -13,7 +20,6 @@
         return count;
     }
 </script>
-
 
 <style>
     .idea {
@@ -26,7 +32,7 @@
         font-size: 4rem;
         letter-spacing: -4px;
         font-weight: 600;
-        color: var(--red);
+        color: var(--yellow);
         margin-bottom: 30px;
     }
     .idea h3 {
@@ -46,7 +52,7 @@
 
     .card {
         background: #141414;
-        border-left: 2px solid var(--red);
+        border-left: 2px solid var(--yellow);
         padding: 20px;
         border-radius: 8px;
         text-align: left;
@@ -54,7 +60,7 @@
 
     .card h4 {
         font-size: 1.75rem;
-        color: var(--red);
+        color: var(--yellow);
         margin-bottom: 20px;
     }
 
@@ -73,7 +79,7 @@
     }
 
     a {
-        color: var(--red);
+        color: var(--yellow);
     }
 </style>
 
@@ -85,12 +91,14 @@
             <div class="card">
                 <h4>{category.Category} (<a href="/apply">apply with one of these ideas</a>):</h4>
                 {#each category.Ideas as idea, ideaIndex}
-                    <p>{getStartIndex(categoryIndex) + ideaIndex}. {idea}</p>
+                    {#if getStartIndex}
+                        <p>{getStartIndex(categoryIndex) + ideaIndex}. {idea}</p>
+                    {/if}
                 {/each}
             </div>
         {/each}
     </div>
     <div class="description">
-        {ideaData?.description}
+        {ideaData?.Description}
     </div>
 </section>

@@ -20,7 +20,7 @@
       </div>
     {/each}
   </div>
-  <p class="description">{text}</p>
+  <p class="description standard-text">{text}</p>
 </section>
 
 <style>
@@ -35,7 +35,7 @@
     font-size: 2.5rem;
     font-family: "Almarai", serif;
     font-weight: 700;
-    color: var(--red);
+    color: var(--yellow);
     margin-bottom: 50px;
   }
 
@@ -50,8 +50,8 @@
 
   .card {
     background: #141414;
-    border-bottom: 3px solid var(--red);
-    border-top: 3px solid var(--red);
+    border-bottom: 3px solid var(--yellow);
+    border-top: 3px solid var(--yellow);
     padding: 40px;
     border-radius: 8px;
     text-align: justify;
@@ -60,14 +60,8 @@
   .card h4 {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--red);
-    margin-bottom: 15px;
-  }
-
-  .card p {
-    font-size: 0.95rem;
     color: var(--yellow);
-    text-align: justify;
+    margin-bottom: 15px;
   }
 
   .why .description {

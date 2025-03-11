@@ -8,7 +8,7 @@
     export let outlineBtn;
     export let fullBtnLink;
     export let outlineBtnLink;
-  </script>
+</script>
   
   <div class="container">
     <img class="hero-logo" src="/logo.svg" alt="Logomark" />

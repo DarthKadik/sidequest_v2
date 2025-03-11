@@ -10,7 +10,7 @@
     }
   
     .outline-btn:hover {
-      background: var(--red);
+      background: var(--yellow);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(242, 66, 54, 0.4);
     }
@@ -35,9 +35,9 @@
   
     .full-btn {
       color: #ffffff;
-      background: var(--red);
+      background: var(--yellow);
       border: none;
-      border: 2px solid var(--red);
+      border: 2px solid var(--yellow);
     }
   
     .outline-btn {
