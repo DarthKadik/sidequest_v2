@@ -92,7 +92,7 @@
                 <h4>{category.Category} (<a href="/apply">apply with one of these ideas</a>):</h4>
                 {#each category.Ideas as idea, ideaIndex}
                     {#if getStartIndex}
-                        <p>{getStartIndex(categoryIndex) + ideaIndex}. {idea}</p>
+                        <p class="standard-text">{getStartIndex(categoryIndex) + ideaIndex}. {idea}</p>
                     {/if}
                 {/each}
             </div>
