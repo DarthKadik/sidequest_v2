@@ -2,7 +2,12 @@
   import { onMount } from "svelte";
   import * as THREE from "three";
   import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-  import { CSS3DRenderer, CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer.js";
+  import {
+    CSS3DRenderer,
+    CSS3DObject,
+  } from "three/examples/jsm/renderers/CSS3DRenderer.js";
+  import directionalLight from "./directionalLight.js";
+  import { signs, icons, updateSignsToFaceCamera } from "./spriteLogic.js";
 
   /**
    * @type {HTMLDivElement}
@@ -17,63 +22,29 @@
       window.innerWidth / window.innerHeight
     );
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    
+
+    // Enable shadow rendering
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Better quality shadows
+
+    // Add a directional light to create shadows from camera POV
+
+    scene.add(directionalLight);
+
+    // Add some ambient light to prevent areas being too dark
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4); // Slightly increased ambient light
+    scene.add(ambientLight);
+
     // Setup CSS3D renderer
     const cssRenderer = new CSS3DRenderer();
     cssRenderer.setSize(window.innerWidth, window.innerHeight);
-    cssRenderer.domElement.style.position = 'absolute';
-    cssRenderer.domElement.style.top = '0';
-    cssRenderer.domElement.style.pointerEvents = 'none'; // Allow click-through
+    cssRenderer.domElement.style.position = "absolute";
+    cssRenderer.domElement.style.top = "0";
+    cssRenderer.domElement.style.pointerEvents = "none"; // Allow click-through
     container.appendChild(renderer.domElement);
     container.appendChild(cssRenderer.domElement);
 
-    // Sign data including positions and text content
-    const signData = [
-      { 
-        position: new THREE.Vector3(-1.3, 0.111, 0.5), 
-        text: "Sign 1", 
-        url: "https://example.com/1" 
-      },
-      { 
-        position: new THREE.Vector3(-1, 0, -1), 
-        text: "Sign 2", 
-        url: "https://example.com/2" 
-      },
-    ];
-
     renderer.setSize(window.innerWidth, window.innerHeight);
-
-    /**
-     * @type {CSS3DObject[]}
-     */
-    const signs = [];
-
-    // Function to create CSS3D sign
-    /**
-     * @param {{ position: any; text: any; url: any; }} data
-     */
-    function createSign(data) {
-      // Create div element for sign
-      const signElement = document.createElement('div');
-      signElement.className = 'map-sign standard-text';
-      signElement.textContent = data.text;
-      signElement.style.pointerEvents = 'auto'; // Enable interaction
-      
-      // Add click handler
-      signElement.addEventListener('click', () => {
-        window.open(data.url, '_blank');
-      });
-      
-      // Create CSS3DObject with the div
-      const sign = new CSS3DObject(signElement);
-      sign.position.copy(data.position);
-      sign.scale.set(0.01, 0.01, 0.01); // Scale down (CSS units to Three.js units)
-      
-      scene.add(sign);
-      signs.push(sign);
-      
-      return sign;
-    }
 
     // Load GLTF Model
     const loader = new GLTFLoader();
@@ -81,14 +52,22 @@
       "map/scene.gltf",
       (gltf) => {
         const model = gltf.scene;
+
         scene.add(model);
 
-        // Create signs from data
-        signData.forEach(data => createSign(data));
+        // Create signs from data and add them to the scene
+        signs.forEach((sign) => {
+          scene.add(sign);
+        });
+
+        // Create icons from data and add them to the scene
+        icons.forEach((icon) => {
+          scene.add(icon);
+        });
 
         // Set up bobbing animation parameters
-        const bobAmount = 0.1; // How far to rotate in each direction (in radians)
-        const bobSpeed = 0.01; // Speed of the bobbing motion
+        const bobAmount = 0.05; // How far to rotate in each direction (in radians)
+        const bobSpeed = 0.006; // Speed of the bobbing motion
         let time = 0;
 
         // Animation Loop
@@ -99,15 +78,23 @@
           time += bobSpeed;
           scene.rotation.y = Math.sin(time) * bobAmount;
 
+          // Keep light directly above the scene, regardless of scene rotation
+          directionalLight.position.set(0, 15, 0);
+          directionalLight.target.position.set(0, 0, 0);
+          scene.add(directionalLight.target);
+
           // Update sign rotations to face camera
-          signs.forEach(sign => {
+          updateSignsToFaceCamera(signs, camera);
+
+          // Make icon meshes face the camera instead of using quaternion directly
+          /* iconSprites.forEach((mesh) => {
             // Get the world position of the camera
             const tempCameraPosition = new THREE.Vector3();
             tempCameraPosition.setFromMatrixPosition(camera.matrixWorld);
             
-            // Make sign face the camera
-            sign.lookAt(tempCameraPosition);
-          });
+            // Make mesh face the camera
+            mesh.lookAt(tempCameraPosition);
+          }); */
 
           renderer.render(scene, camera);
           cssRenderer.render(scene, camera);
@@ -140,16 +127,18 @@
 </script>
 
 <div class="container">
-  <h1>Hello World</h1>
+  <h2>Hello World</h2>
   <div bind:this={container} class="three-container"></div>
 </div>
 
 <style>
+  h1 {
+  }
   .container {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: white;
+    background-color: black;
   }
   .three-container {
     width: 100%;
@@ -172,5 +161,15 @@
   }
   :global(.map-sign:hover) {
     background-color: #333;
+  }
+  :global(.child-element) {
+    width: 0px;
+    height: 40px;
+    border: 1px dashed var(--yellow);
+  }
+  :global(.map-sign-container) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

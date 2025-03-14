@@ -327,9 +327,19 @@
           1
         ],
         "metallicFactor": 0,
-        "roughnessFactor": 0.4000000059604645
+        "roughnessFactor": 1
       },
-      "doubleSided": true
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 10
+        }
+      }
     },
     {
       "pbrMetallicRoughness": {
@@ -340,9 +350,19 @@
           1
         ],
         "metallicFactor": 0,
-        "roughnessFactor": 0.4000000059604645
+        "roughnessFactor": 1
       },
-      "doubleSided": true
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 10
+        }
+      }
     },
     {
       "pbrMetallicRoughness": {
@@ -353,14 +373,19 @@
           1
         ],
         "metallicFactor": 0,
-        "roughnessFactor": 0.4000000059604645
+        "roughnessFactor": 0.4
       },
       "emissiveFactor": [
         1,
         0.5711248294565854,
         0.007499032040460618
       ],
-      "doubleSided": true
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 0.4
+        }
+      }
     }
   ],
   "meshes": [
@@ -406,5 +431,8 @@
         }
       ]
     }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_emissive_strength"
   ]
 }
