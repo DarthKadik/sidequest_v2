@@ -139,9 +139,14 @@ function createIconSprite(data) {
 // Function to create CSS3D sign
 /**
  * @param {{ position: any; text: any; url: any; }} data
- * @returns {CSS3DObject}
+ * @returns {CSS3DObject|null}
  */
 function createSign(data) {
+  // Check if document is defined (browser environment)
+  if (typeof document === 'undefined') {
+    return null;
+  }
+  
   // Create div element for sign
   const signElement = document.createElement("div");
   signElement.className = "map-sign-container";
@@ -184,7 +189,11 @@ export function updateSignsToFaceCamera(signs, camera) {
   });
 }
 
-export const signs = signData.map(createSign);
-export const icons = iconData
-  .map(createIconSprite)
-  .filter((icon) => icon !== null);
+export const signs = typeof document !== 'undefined' 
+  ? signData.map(createSign).filter(sign => sign !== null)
+  : [];
+export const icons = typeof document !== 'undefined'
+  ? iconData
+    .map(createIconSprite)
+    .filter((icon) => icon !== null)
+  : [];
