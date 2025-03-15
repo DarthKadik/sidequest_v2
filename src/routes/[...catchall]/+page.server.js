@@ -5,7 +5,7 @@ import { fetchOneEntry, getBuilderSearchParams } from '@builder.io/sdk-svelte';
 export async function load(event) {
   // fetch your Builder content
   const content = await fetchOneEntry({
-    model: 'custome-page',
+    model: 's-2',
     apiKey: "7bff0c6c736b40dbaef3300a46e5008d",
     options: getBuilderSearchParams(event.url.searchParams),
     userAttributes: {
