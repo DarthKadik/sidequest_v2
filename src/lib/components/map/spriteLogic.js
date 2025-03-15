@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import * as THREE from "three";
 import { CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
@@ -162,6 +163,8 @@ function createSign(data) {
   signElement.appendChild(signBottom);
   // Add click handler
   signElement.addEventListener("click", () => {
+    posthog.capture('my event', { property: 'value' })
+    console.log("event capured!")
     window.open(data.url, "_blank");
   });
 
