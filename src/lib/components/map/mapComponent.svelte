@@ -334,4 +334,14 @@
     font-size: 0.875em;
     color: var(--yellow);
   }
+
+  @media only screen and (max-width: 768px) {
+    .header-text {
+      display: none;
+    }
+
+    .header {
+      justify-content: center;
+    }
+  }
 </style>

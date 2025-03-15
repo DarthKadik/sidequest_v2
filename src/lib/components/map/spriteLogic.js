@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 const signData = [
   {
     position: new THREE.Vector3(0, 0.2, -0.091),
-    text: "How Sidequest works",
+    text: "What's Sidequest?",
     url: "/about",
   }
 ];
