@@ -309,6 +309,48 @@
     }
 
     @media (max-width: 768px) {
+        h1 {
+            display: none;
+        }
+
+        .header p {
+            display: none;
+        }
+
+        a {
+            display: none;
+        }
+
+        .header {
+            justify-content: center;
+        }
+
+        #showAllBtn {
+            font-size: 0.8em;
+            padding: 5px;
+        }
+
+        .search-filter {
+            display: none;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
+            height: 100vh;
+        }
+
+        img {
+            max-width: 100vw;
+        }
+
+        .before, .after {
+            display: none;
+        }
+
+
+    }
+
+    @media (max-width: 7px) {
 
         .header {
             width: 35vw;

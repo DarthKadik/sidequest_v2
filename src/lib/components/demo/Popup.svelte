@@ -185,4 +185,11 @@
         border: 1px solid #ffc715;
         white-space: nowrap;
     }
+
+    @media only screen and (max-width: 768px) {
+        .popup {
+            padding: 20px;
+            max-width: 90vw;
+        }
+    }
 </style>

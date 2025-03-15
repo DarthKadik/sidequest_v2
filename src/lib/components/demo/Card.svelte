@@ -23,9 +23,9 @@
     {#if !isGridView}
         <div class="image-container">
             {#if project.name.trim() != "Vladimir Surtaev"}
-                <img style="max-width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
+                <img src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
             {:else}
-                <img style="max-width: 20vw" src={`/projectImages/${project.name.split(' ')[0]}sProject2.png`} alt={project.oneliner} />
+                <img src={`/projectImages/${project.name.split(' ')[0]}sProject2.png`} alt={project.oneliner} />
             {/if}    
             <div class="fog-overlay"></div>
         </div>
@@ -61,6 +61,10 @@
         -moz-appearance: none;
         outline: none;
         z-index: 100;
+        }
+
+        img {
+            max-width: 20vw;
         }
 
         .card:hover {
@@ -155,6 +159,9 @@
     @media (max-width: 768px) {
         .card {
             width: 60vw;
+        }
+        img {
+            max-width: 100vw;
         }
     }
 </style>
