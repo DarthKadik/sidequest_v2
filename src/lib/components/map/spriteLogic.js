@@ -1,23 +1,14 @@
 import * as THREE from "three";
 import { CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer.js";
+import { gsap } from "gsap";
 
 // Sign data including positions and text content
 const signData = [
   {
-    position: new THREE.Vector3(-1.498, 0.032, -0.54),
+    position: new THREE.Vector3(0, 0.2, -0.091),
     text: "How Sidequest works",
-    url: "https://example.com/1",
-  },
-  {
-    position: new THREE.Vector3(0.001, 0.096, -0.091),
-    text: "Built in Sidequest",
-    url: "https://example.com/2",
-  },
-  {
-    position: new THREE.Vector3(1.299, 0.532, -0.549),
-    text: "Apply for next start",
-    url: "https://example.com/2",
-  },
+    url: "/about",
+  }
 ];
 
 // Icon data including positions and icon types
@@ -36,8 +27,9 @@ const iconData = [
     flipped: true,
   },
   {
-    position: new THREE.Vector3(0.2, 0.35, -0.5),
+    position: new THREE.Vector3(-0.1, 0.5, -0.5),
     type: "rocket",
+    flipped: true
   },
   {
     position: new THREE.Vector3(-2.109, -0.285, -0.098),
@@ -68,13 +60,18 @@ const iconData = [
     position: new THREE.Vector3(2.206, 0.497, -0.125),
     type: "tree",
   },
+  {
+    position: new THREE.Vector3(-1.151, -0.3, 0.233),
+    type: "runner",
+  }
 ];
 
 const iconMap = {
-  face: { source: "map/icons/face.png", height: 194, width: 183 },
+    face: { source: "map/icons/face.png", height: 194, width: 183 },
   rock: { source: "map/icons/stone.png", height: 273, width: 264 },
   rocket: { source: "map/icons/rocket.png", height: 576, width: 478 },
   track: { source: "map/icons/track.png", height: 579, width: 1129 },
+  runner: { source: "map/icons/runner.png", height: 300, width: 450 },
   tree: { source: "map/icons/tree.png", height: 362, width: 282 },
   stone: { source: "map/icons/rock.png", height: 273, width: 264 }, // Alias for rock
 };
@@ -86,7 +83,6 @@ const iconMap = {
  */
 function createIconSprite(data) {
   // Get icon information from the iconMap based on type
-  // @ts-ignore
   const iconInfo = iconMap[data.type];
 
   if (!iconInfo) {
@@ -122,6 +118,10 @@ function createIconSprite(data) {
     planeGeometry.rotateZ(0 * ((2 * Math.PI) / 360));
   }
 
+  if (data.type === "rocket") {
+    planeGeometry.rotateZ(-10 * ((2 * Math.PI) / 360));
+  }
+
   // Adjust the geometry vertices to make bottom center the origin point
   planeGeometry.translate(0, height / 2, 0);
 
@@ -138,10 +138,11 @@ function createIconSprite(data) {
 
 // Function to create CSS3D sign
 /**
- * @param {{ position: any; text: any; url: any; }} data
- * @returns {CSS3DObject|null}
+ * @param {{position: any;text: any;url: any;}} data
+ * @returns {CSS3DObject | null}
+ * @param {number} index
  */
-function createSign(data) {
+function createSign(data, index) {
   // Check if document is defined (browser environment)
   if (typeof document === 'undefined') {
     return null;
@@ -162,13 +163,19 @@ function createSign(data) {
   signElement.appendChild(signBottom);
   // Add click handler
   signElement.addEventListener("click", () => {
-    window.open(data.url, "_blank");
+    window.location.href = data.url;
   });
 
   // Create CSS3DObject with the div
   const sign = new CSS3DObject(signElement);
   sign.position.copy(data.position);
-  sign.scale.set(0.005, 0.005, 0.005); // Scale down (CSS units to Three.js units)
+  sign.scale.set(0.01, 0.01, 0.01); // Scale up for narrow screens
+
+  // Set initial position for animation
+  sign.position.y += 2;
+
+  // Animate to final position with delay
+  gsap.to(sign.position, { y: data.position.y, duration: 1, ease: "bounce.out", delay: 0.5 + index * 0.1 });
 
   return sign;
 }
@@ -190,7 +197,7 @@ export function updateSignsToFaceCamera(signs, camera) {
 }
 
 export const signs = typeof document !== 'undefined' 
-  ? signData.map(createSign).filter(sign => sign !== null)
+  ? signData.map((data, index) => createSign(data, index)).filter(sign => sign !== null)
   : [];
 export const icons = typeof document !== 'undefined'
   ? iconData
