@@ -16,6 +16,7 @@
         learning: string;
         contact: string;
         tags: string[];
+        image: string;
     }
 
 	let isGridView: boolean = false;
@@ -79,20 +80,10 @@
 	<div class="header">
         <h1>sidequest</h1>
         <div class="title">
-            <p>S1 Project Library</p>
             <p  class="hidden-on-desktop" style="color: white; text-align: left; font-size: 0.7em; width: 75vw;">We are working on making this page available for smaller screen sizes, but in the meantime, please use a bigger screen!</p>
-            <button id="showAllBtn" on:click={() => {
-                isGridView = !isGridView;
-                if (isGridView) {
-                    pauseCarousels();
-                } else {
-                    resumeCarousels();
-                }
-            }}>
-                {isGridView ? 'Show Carousels' : 'Show All'}
-            </button>
+            <img src="/projects_qr.png" alt="QR" style="width: 90%; height: auto;"/>
         </div>
-        <a href="https://mysidequest.xyz" class="back-link">&lt; Back to home</a>
+        <p class="standard-text">IRL in HEL </p>
 	</div>
 
     {#if !isGridView}
@@ -309,9 +300,6 @@
     }
 
     @media (max-width: 768px) {
-        .wrapper {
-            flex-direction: row;
-        }
 
         h1 {
             display: none;
