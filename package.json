@@ -23,7 +23,7 @@
 	},
 	"dependencies": {
 		"@builder.io/react": "^8.0.2",
-		"@builder.io/sdk-svelte": "^3.0.7",
+		"@builder.io/sdk-svelte": "^4.0.3",
 		"@sveltejs/adapter-node": "^5.2.11",
 		"axios": "^1.7.9",
 		"gsap": "^3.12.7",
