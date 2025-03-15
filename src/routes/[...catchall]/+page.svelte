@@ -147,12 +147,6 @@
       <!-- TO DO: Add your Public API Key in <Content/>-->
       {#if canShowContent}
         <Content
-          model={model}
-          content={data.content}
-          apiKey={apiKey} 
-          customComponents={CUSTOM_COMPONENTS}
-        />
-        <Content
           model="s-2"
           content={data.content}
           apiKey="7bff0c6c736b40dbaef3300a46e5008d"
