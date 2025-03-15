@@ -146,6 +146,7 @@
     <div class="global-container">
       <!-- TO DO: Add your Public API Key in <Content/>-->
       {#if canShowContent}
+        <div>page Title: {data.content?.data?.title || "Unpublished"}</div>
         <Content
           model="s-2"
           content={data.content}
