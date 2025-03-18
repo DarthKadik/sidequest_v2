@@ -12,12 +12,12 @@ const signData = [
   },
   {
     position: new THREE.Vector3(0.001, 0.3, -0.091),
-    text: "Apply for next start",
+    text: "Join the next season!",
     url: "/apply",
   },
   {
     position: new THREE.Vector3(1.299, 0.75, -0.549),
-    text: "Built in Sidequest",
+    text: "Built with us",
     url: "/s1/projects",
   },
 ];

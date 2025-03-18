@@ -341,8 +341,16 @@
       display: none;
     }
 
+    :global(.map-sign) {
+      font-size: 0.8em;
+    }
+
     .header {
       justify-content: center;
+    }
+
+    .logo {
+      width: auto;
     }
   }
 </style>
