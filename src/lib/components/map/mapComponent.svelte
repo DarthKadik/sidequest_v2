@@ -15,6 +15,13 @@
    */
   let container: HTMLDivElement;
 
+  // Example button data
+  const buttons = [
+    { label: "Join the next season!", x: "40%", y: "15%", link: "/apply" },
+    { label: "How Sidequest works", x: "50%", y: "45%", link: "/about" },
+    { label: "Built with us", x: "30%", y: "60%", link: "/s1/projects" },
+  ];
+
   onMount(() => {
 
     // Scene Setup
@@ -255,12 +262,73 @@
       <p class="standard-text">Organized online by fellow tinkerers / hackers / artists<br /> from Finland free of charge & open for all.</p>
     </div>
   </div>
-  <div bind:this={container} class="three-container"></div>
+  <div bind:this={container} class="three-container">
+    <!-- ...existing code... -->
+  </div>
+  <div class="mobile-map-container">
+    <img class="vertical-map" src="/map-vertical.png" alt="">
+    {#each buttons as button}
+      <a
+        href={button.link}
+        class="map-button"
+        style="left: {button.x}; top: {button.y}; {button.label === 'Join the next season!' ? '' : ''}"
+        aria-label={button.label}
+      >
+        {button.label}
+      </a>
+    {/each}
+  </div>
 </div>
 
 <style>
   h1 {
   }
+
+  .mobile-map-container {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    max-height: calc(100vh - 140px);
+    height: calc(100vh - 140px);
+  }
+
+  .vertical-map {
+    display: none;
+    width: auto;
+    max-height: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .map-button {
+    position: absolute;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+    border: 2px dashed var(--yellow);
+    border-radius: 999px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    user-select: none;
+    font-size: 0.8em;
+    transform-origin: center;
+    transition: font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .map-button:hover {
+    background-color: black;
+    color: var(--yellow);
+    transform: scale(1.1);
+  }
+
   .container {
     width: 100%;
     height: 100vh;
@@ -364,5 +432,24 @@
     .logo {
       width: auto;
     }
+
+    .three-container {
+      display: none;
+    }
+
+    .fullscreen-svg {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    .vertical-map {
+      display: block;
+    }
+
   }
 </style>
