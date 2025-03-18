@@ -40,6 +40,7 @@
 
     // Setup CSS3D renderer
     const cssRenderer = new CSS3DRenderer();
+    cssRenderer.setSize(window.innerWidth, window.innerHeight);
     cssRenderer.domElement.style.position = "absolute";
     cssRenderer.domElement.style.top = "0";
     cssRenderer.domElement.style.pointerEvents = "none"; // Allow click-through
@@ -156,6 +157,10 @@
 
         // Create icons from data and add them to the scene
         icons.forEach((icon) => {
+          const textureLoader = new THREE.TextureLoader();
+          const iconTexture = textureLoader.load(icon.source);
+          iconTexture.minFilter = THREE.LinearFilter; // Ensure texture is crisp
+          iconTexture.magFilter = THREE.LinearFilter; // Ensure texture is crisp
           scene.add(icon);
         });
 
@@ -280,20 +285,26 @@
     user-select: none;
     font-size: 0.6em;
     transform-origin: center;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   :global(.map-sign-small) {
-    font-size: 0.8em;
+    font-size: 0.6em;
     padding: 10px 15px;
     border-width: 2px;
+    transform: scale(0.8);
   }
   :global(.map-sign-medium) {
-    font-size: 1em;
+    font-size: 0.6em;
     padding: 12px 18px;
+    transform: scale(1);
   }
   :global(.map-sign-large) {
-    font-size: 1em;
+    font-size: 0.6em;
     padding: 15px 20px;
+    transform: scale(1.2);
   }
   :global(.map-sign:hover) {
     background-color: #333;

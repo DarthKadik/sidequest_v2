@@ -103,6 +103,8 @@ function createIconSprite(data) {
 
   const textureLoader = new THREE.TextureLoader();
   const iconTexture = textureLoader.load(iconInfo.source);
+  iconTexture.minFilter = THREE.LinearFilter; // Ensure texture is crisp
+  iconTexture.magFilter = THREE.LinearFilter; // Ensure texture is crisp
 
   const material = new THREE.MeshBasicMaterial({
     map: iconTexture,
@@ -163,7 +165,7 @@ function createSign(data, index) {
   const signElement = document.createElement("div");
   signElement.className = "map-sign-container";
   const signTop = document.createElement("div");
-  signTop.className = "map-sign standard-text";
+  signTop.className = "map-sign standard-text map-sign-medium"; // Add appropriate class for scaling
   signTop.style.pointerEvents = "auto"; // Enable interaction
   signTop.textContent = data.text;
 
