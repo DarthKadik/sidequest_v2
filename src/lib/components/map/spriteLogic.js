@@ -6,10 +6,20 @@ import { gsap } from "gsap";
 // Sign data including positions and text content
 const signData = [
   {
-    position: new THREE.Vector3(0, 0.2, -0.091),
-    text: "What's Sidequest?",
+    position: new THREE.Vector3(-1.6, 0.11, -0.54),
+    text: "How Sidequest works",
     url: "/about",
-  }
+  },
+  {
+    position: new THREE.Vector3(0.001, 0.3, -0.091),
+    text: "Apply for next start",
+    url: "/apply",
+  },
+  {
+    position: new THREE.Vector3(1.299, 0.75, -0.549),
+    text: "Built in Sidequest",
+    url: "/s1/projects",
+  },
 ];
 
 // Icon data including positions and icon types
@@ -28,7 +38,7 @@ const iconData = [
     flipped: true,
   },
   {
-    position: new THREE.Vector3(-0.1, 0.5, -0.5),
+    position: new THREE.Vector3(-0.1, 0.8, -0.5),
     type: "rocket",
     flipped: true
   },
