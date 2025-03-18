@@ -24,6 +24,7 @@
       window.innerWidth / window.innerHeight
     );
     const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio); // Set pixel ratio for better resolution
 
     // Enable shadow rendering
     renderer.shadowMap.enabled = true;
@@ -114,6 +115,7 @@
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
       cssRenderer.setSize(width, height);
+      renderer.setPixelRatio(window.devicePixelRatio); // Ensure pixel ratio is set on resize
 
       // Adjust sign positions to avoid squeezing on mobile
       const signContainers = document.querySelectorAll('.map-sign-container');
@@ -272,7 +274,6 @@
     border: 2px dashed var(--yellow);
     border-radius: 999px;
     padding: 10px 15px;
-    font-weight: bold;
     text-align: center;
     cursor: pointer;
     width: auto;
