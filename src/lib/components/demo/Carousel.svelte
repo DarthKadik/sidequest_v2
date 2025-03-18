@@ -90,8 +90,8 @@
 	.carousel {
         position: relative;
         overflow: hidden;
-        width: 26vw;
-        padding: 10px;
+        width: calc(24vw + 20px);
+        padding: 10px 0;
         flex-shrink: 0;
         overflow-x: visible;
         display: flex;

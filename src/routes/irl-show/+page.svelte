@@ -253,6 +253,7 @@
 
     :global(.carousel-container) {
         display: flex;
+        gap: 20px;
     }
 
     .grid-container {

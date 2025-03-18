@@ -44,7 +44,7 @@
 
 <style>
     .card {
-        width: 22.5vw;
+        width: 24vw;
         display: flex;
         flex-direction: column;
         padding: 15px;

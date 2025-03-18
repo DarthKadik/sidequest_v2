@@ -262,6 +262,8 @@
 
     :global(.carousel-container) {
         display: flex;
+        align-items: right;
+        justify-content: right;
     }
 
     .grid-container {
