@@ -7,6 +7,7 @@
     import Why from "$lib/components/Why.svelte";
     import Roadmap from "$lib/components/Roadmap.svelte";
     import BottomCTA from "$lib/components/BottomCTA.svelte";
+    import ErrorComponent from '$lib/components/ErrorComponent.svelte'; // Import the ErrorComponent
   
     const apiKey = "7bff0c6c736b40dbaef3300a46e5008d";
     const model = "custome-page";
@@ -140,6 +141,11 @@
   
     // show unpublished content when in preview mode.
     const canShowContent = data.content || isPreviewing();
+
+  export let params;
+  const status = 404;
+  const error = new Error(`The route "${params?.catchall}" does not exist.`);
+
   </script>
   
   <main>
@@ -152,8 +158,7 @@
           apiKey="7bff0c6c736b40dbaef3300a46e5008d"
         />
       {:else}
-        Content Not Found
+        <ErrorComponent {status} {error} />
       {/if}
     </div>
   </main>
-    
