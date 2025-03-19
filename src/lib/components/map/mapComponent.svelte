@@ -351,7 +351,7 @@
     cursor: pointer;
     width: auto;
     user-select: none;
-    font-size: 0.6em;
+    font-size: 1.5em;
     transform-origin: center;
     transition: font-size 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
     -webkit-font-smoothing: antialiased;
@@ -359,18 +359,18 @@
     text-rendering: optimizeLegibility;
   }
   :global(.map-sign-small) {
-    font-size: 0.6em;
+    font-size: 1.5em;
     padding: 10px 15px;
     border-width: 2px;
     transform: scale(0.8);
   }
   :global(.map-sign-medium) {
-    font-size: 0.6em;
+    font-size: 1.5em;
     padding: 12px 18px;
     transform: scale(1);
   }
   :global(.map-sign-large) {
-    font-size: 0.6em;
+    font-size: 1.5em;
     padding: 15px 20px;
     transform: scale(1.2);
   }

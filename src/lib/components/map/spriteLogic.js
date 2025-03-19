@@ -6,17 +6,17 @@ import { gsap } from "gsap";
 // Sign data including positions and text content
 const signData = [
   {
-    position: new THREE.Vector3(-1.6, 0.11, -0.54),
+    position: new THREE.Vector3(-2, 0, -1),
     text: "How Sidequest works",
     url: "/about",
   },
   {
-    position: new THREE.Vector3(0.001, 0.3, -0.091),
+    position: new THREE.Vector3(0, 0.3, 0),
     text: "Join the next season!",
     url: "/apply",
   },
   {
-    position: new THREE.Vector3(1.299, 0.75, -0.549),
+    position: new THREE.Vector3(1.3, 0.8, -0.55),
     text: "Built with us",
     url: "/s1/projects",
   },
@@ -33,7 +33,7 @@ const iconData = [
     type: "track",
   },
   {
-    position: new THREE.Vector3(-1.766, -0.263, 0.087),
+    position: new THREE.Vector3(-1.8, -0.3, 0.1),
     type: "stone",
     flipped: true,
   },
@@ -103,8 +103,10 @@ function createIconSprite(data) {
 
   const textureLoader = new THREE.TextureLoader();
   const iconTexture = textureLoader.load(iconInfo.source);
-  iconTexture.minFilter = THREE.LinearFilter; // Ensure texture is crisp
-  iconTexture.magFilter = THREE.LinearFilter; // Ensure texture is crisp
+  iconTexture.minFilter = THREE.NearestFilter; // Ensure texture is crisp
+  iconTexture.magFilter = THREE.NearestFilter; // Ensure texture is crisp
+  iconTexture.needsUpdate = true;
+  iconTexture.generateMipmaps = false;
 
   const material = new THREE.MeshBasicMaterial({
     map: iconTexture,
@@ -183,7 +185,7 @@ function createSign(data, index) {
   // Create CSS3DObject with the div
   const sign = new CSS3DObject(signElement);
   sign.position.copy(data.position);
-  sign.scale.set(0.01, 0.01, 0.01); // Scale up for narrow screens
+  sign.scale.set(0.005, 0.005, 0.005); // Scale up for narrow screens
 
   // Set initial position for animation
   sign.position.y += 2;
