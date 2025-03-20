@@ -20,16 +20,14 @@
 </script>
 
 <button type="button" style="{style}" class="card {className}" class:grid-card={isGridView} on:click={() => showPopup(project)}>
-    {#if !isGridView}
-        <div class="image-container">
-            {#if project.name.trim() != "Vladimir Surtaev"}
-                <img src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
-            {:else}
-                <img src={`/projectImages/${project.name.split(' ')[0]}sProject2.png`} alt={project.oneliner} />
-            {/if}    
-            <div class="fog-overlay"></div>
-        </div>
-    {/if}
+    <div class="image-container" class:show-image-in-grid={isGridView}>
+        {#if project.name.trim() != "Vladimir Surtaev"}
+            <img src={`/projectImages/${project.name.split(' ')[0]}sProject.png`} alt={project.oneliner} />
+        {:else}
+            <img src={`/projectImages/${project.name.split(' ')[0]}sProject2.png`} alt={project.oneliner} />
+        {/if}
+        <div class="fog-overlay"></div>
+    </div>
     <div class="content">
         <p class="name">{project.name} presents</p>
         <h2>{project.oneliner}</h2>
@@ -85,6 +83,17 @@
     .grid-card .image-container {
         display: none;
     }
+
+    .grid-card.show-image-in-grid .image-container {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .grid-card .image-container {
+            display: block;
+        }
+    }
+
 .image-container {
         position: relative;
         display: block;
@@ -158,7 +167,7 @@
 
     @media (max-width: 768px) {
         .card {
-            width: 60vw;
+            width: 80vw;
         }
         img {
             max-width: 100vw;

@@ -16,6 +16,7 @@
         learning: string;
         contact: string;
         tags: string[];
+        image: string; // Added the missing 'image' property
     }
 
 	let isGridView: boolean = false;
@@ -69,8 +70,15 @@
         const mediaQuery = window.matchMedia('(max-width: 768px)');
         isSmallScreen = mediaQuery.matches;
 
+        if (isSmallScreen) {
+            isGridView = true; // Default to grid view on mobile
+        }
+
         mediaQuery.addEventListener('change', (event) => {
-        isSmallScreen = event.matches;
+            isSmallScreen = event.matches;
+            if (isSmallScreen) {
+                isGridView = true;
+            }
         });
     });
 </script>
@@ -125,7 +133,12 @@
             </div>
         <div class="grid-container">
                 {#each filterProjects(projects) as project, index (project.id)}
-                    <Card {project} isGridView={true} showPopup={showPopup} style={index < 3 ? 'margin-top: 50px;' : index > filterProjects(projects).length - 4 ? 'margin-bottom: 50px;' : ''} />
+                    <Card 
+                        {project} 
+                        isGridView={true} 
+                        showPopup={showPopup} 
+                        style={!isSmallScreen && index < 3 ? 'margin-top: 50px;' : !isSmallScreen && index > filterProjects(projects).length - 4 ? 'margin-bottom: 50px;' : ''} 
+                    />
                 {/each}
             <div class="before"></div>
             <div class="after"></div>
@@ -319,49 +332,52 @@
     }
 
     @media (max-width: 768px) {
+        .search-filter {
+            display: none;
+        }
         .wrapper {
-            flex-direction: row;
+            flex-direction: column;
         }
 
-        h1 {
-            display: none;
-        }
-
-        .header p {
-            display: none;
-        }
-
-        a {
-            display: none;
+        .grid-container {
+            justify-items: center;
         }
 
         .header {
-            justify-content: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            height: 20vh;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 5px 0;
         }
 
         #showAllBtn {
-            font-size: 0.8em;
-            padding: 5px;
+            display: none;
         }
 
-        .search-filter {
-            display: none;
+        .grid-search-container {
+            height: calc(80vh - 10px);
         }
 
         .grid-container {
             grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
-            height: 100vh;
+            height: auto;
         }
 
         img {
             max-width: 100vw;
         }
 
-        .before, .after {
-            display: none;
+        .before {
+            top: calc(20vh + 10px); /* Adjusted to align exactly on top of the cards */
         }
-
-
     }
 
     @media (max-width: 7px) {

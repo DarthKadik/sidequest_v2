@@ -22,8 +22,8 @@
     <div class="container">
       {#if status === 404}
         <img src="/404Finland.png" alt="404 error" class="error-image" />
-        <h1>Uncharted path</h1>
-        <p>You seem to be lost, the page you are looking for doesn't exist :(</p>
+        <h1>UNCHARTED PATH</h1>
+        <p>You seem to be lost, this page doesn't exist :(</p>
       {:else}
         <h1>An Error Occurred</h1>
         <p>{error?.message || 'Something went wrong.'}</p>
@@ -87,10 +87,13 @@
   .home-link {
     display: inline-block;
     padding: 0.5rem 1rem;
+    text-align: center;
+    max-width: 300px;
     background-color: var(--yellow);
     color: var(--black);
     text-decoration: none;
     border-radius: 5px;
+    margin: 0 auto; /* Center the button */
   }
 
   .home-link:hover {
